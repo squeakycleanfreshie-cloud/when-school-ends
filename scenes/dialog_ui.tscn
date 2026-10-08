@@ -1,3 +1,37 @@
 [gd_scene format=3 uid="uid://3qxrq5bldbxp"]
 
-[node name="dialog_ui" type="Node2D" unique_id=921144888]
+[node name="Dialog_UI" type="Control" unique_id=300828050]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialog_Box" type="PanelContainer" parent="." unique_id=1712791480]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -149.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SpeakerBox" type="PanelContainer" parent="." unique_id=2063137345]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -214.0
+offset_right = 253.0
+offset_bottom = -148.79999
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=310501645]
+position = Vector2(1049, 592)
+scale = Vector2(0.5369405, 0.8305085)
+polygon = PackedVector2Array(150, 30, 50, 50, 50, 10)

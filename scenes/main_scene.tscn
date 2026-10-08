@@ -1,3 +1,47 @@
 [gd_scene format=3 uid="uid://n7qyd55smp7u"]
 
+[ext_resource type="Texture2D" uid="uid://dtkpumt2vx7ba" path="res://assets/backgrounds/classroom_BG1.jpg" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://bey6wklc0vj6g" path="res://scenes/character.tscn" id="2_pw63i"]
+
 [node name="main_scene" type="Node2D" unique_id=215371280]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1697247942]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=478818721]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w2twt")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=873712375]
+
+[node name="Control" type="Control" parent="CanvasLayer2" unique_id=982506800]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="character" parent="CanvasLayer2/Control" unique_id=2080697567 instance=ExtResource("2_pw63i")]
+position = Vector2(580, 347.00003)
+scale = Vector2(3, 3)
+
+[node name="Dialog_Box" type="PanelContainer" parent="CanvasLayer2" unique_id=318499827]
+custom_minimum_size = Vector2(0, 150)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -149.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0

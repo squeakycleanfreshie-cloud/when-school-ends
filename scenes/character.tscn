@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bey6wklc0vj6g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_usdog"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"talking",
+"speed": 5.0
+}]
+
+[node name="character" type="Node2D" unique_id=2080697567]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=32363320]
+sprite_frames = SubResource("SpriteFrames_usdog")
+animation = &"talking"
