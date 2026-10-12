@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://3qxrq5bldbxp"]
 
+[ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="1_xh3aw"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xh3aw"]
+content_margin_left = 7.0
+content_margin_top = 7.0
+content_margin_right = 7.0
+content_margin_bottom = 7.0
 bg_color = Color(0.60784316, 0.7137255, 0.76862746, 0.6745098)
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
 
 [sub_resource type="Theme" id="Theme_n58gf"]
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_xh3aw")
+
+[sub_resource type="Theme" id="Theme_yjvli"]
 
 [sub_resource type="Theme" id="Theme_xh3aw"]
 
@@ -36,13 +42,20 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_n58gf")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog_Box" unique_id=1287688014]
+layout_mode = 2
+theme = SubResource("Theme_yjvli")
+theme_override_fonts/normal_font = ExtResource("1_xh3aw")
+theme_override_font_sizes/normal_font_size = 30
+text = "This Is a Line of Dialog"
+
 [node name="SpeakerBox" type="PanelContainer" parent="." unique_id=1149061337]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -213.0
-offset_right = 209.0
+offset_right = 274.0
 offset_bottom = -149.00012
 grow_vertical = 0
 theme = SubResource("Theme_xh3aw")
@@ -63,3 +76,13 @@ grow_vertical = 0
 [node name="Polygon2D" type="Polygon2D" parent="Control" unique_id=1901228682]
 position = Vector2(-27, -28)
 polygon = PackedVector2Array(0, 0, 50, 25, 0, 50)
+
+[node name="Label" type="Label" parent="." unique_id=1255366432]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 443.0
+offset_right = 160.0
+offset_bottom = 501.0
+theme_override_fonts/font = ExtResource("1_xh3aw")
+theme_override_font_sizes/font_size = 56
+text = "Name"
