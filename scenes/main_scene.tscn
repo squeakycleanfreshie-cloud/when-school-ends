@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dtkpumt2vx7ba" path="res://assets/backgrounds/classroom_BG1.jpg" id="1_w2twt"]
 [ext_resource type="PackedScene" uid="uid://bey6wklc0vj6g" path="res://scenes/character.tscn" id="2_pw63i"]
+[ext_resource type="PackedScene" uid="uid://3qxrq5bldbxp" path="res://scenes/dialog_ui.tscn" id="3_7ykc4"]
 
 [node name="main_scene" type="Node2D" unique_id=215371280]
 
@@ -35,13 +36,4 @@ grow_vertical = 0
 position = Vector2(580, 347.00003)
 scale = Vector2(3, 3)
 
-[node name="Dialog_Box" type="PanelContainer" parent="CanvasLayer2" unique_id=318499827]
-custom_minimum_size = Vector2(0, 150)
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -149.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Dialog_UI" parent="CanvasLayer2" unique_id=300828050 instance=ExtResource("3_7ykc4")]

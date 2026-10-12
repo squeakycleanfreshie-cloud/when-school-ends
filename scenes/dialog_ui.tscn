@@ -1,5 +1,20 @@
 [gd_scene format=3 uid="uid://3qxrq5bldbxp"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xh3aw"]
+bg_color = Color(0.60784316, 0.7137255, 0.76862746, 0.6745098)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="Theme" id="Theme_n58gf"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_xh3aw")
+
+[sub_resource type="Theme" id="Theme_xh3aw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edwrk"]
+bg_color = Color(0.6509804, 0.69803923, 0.4392157, 0.6745098)
+corner_radius_top_right = 66
+corner_detail = 1
+
 [node name="Dialog_UI" type="Control" unique_id=300828050]
 layout_mode = 3
 anchors_preset = 15
@@ -8,7 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Dialog_Box" type="PanelContainer" parent="." unique_id=1712791480]
+[node name="Dialog_Box" type="PanelContainer" parent="." unique_id=348185025]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 1
 anchors_preset = 12
@@ -19,19 +34,32 @@ offset_top = -149.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = SubResource("Theme_n58gf")
 
-[node name="SpeakerBox" type="PanelContainer" parent="." unique_id=2063137345]
-custom_minimum_size = Vector2(200, 50)
+[node name="SpeakerBox" type="PanelContainer" parent="." unique_id=1149061337]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -214.0
-offset_right = 253.0
-offset_bottom = -148.79999
+offset_top = -213.0
+offset_right = 209.0
+offset_bottom = -149.00012
+grow_vertical = 0
+theme = SubResource("Theme_xh3aw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_edwrk")
+
+[node name="Control" type="Control" parent="." unique_id=2104121348]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
 grow_vertical = 0
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=310501645]
-position = Vector2(1049, 592)
-scale = Vector2(0.5369405, 0.8305085)
-polygon = PackedVector2Array(150, 30, 50, 50, 50, 10)
+[node name="Polygon2D" type="Polygon2D" parent="Control" unique_id=1901228682]
+position = Vector2(-27, -28)
+polygon = PackedVector2Array(0, 0, 50, 25, 0, 50)
