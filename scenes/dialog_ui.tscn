@@ -46,7 +46,7 @@ theme = SubResource("Theme_n58gf")
 layout_mode = 2
 theme = SubResource("Theme_yjvli")
 theme_override_fonts/normal_font = ExtResource("1_xh3aw")
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 40
 text = "This Is a Line of Dialog"
 
 [node name="SpeakerBox" type="PanelContainer" parent="." unique_id=1149061337]

@@ -1,0 +1,70 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cums8jw1hypja"]
+
+[ext_resource type="Texture2D" uid="uid://bu8ri0kw4a7c7" path="res://assets/characters/oakley/idle/Oakley_idle1.png" id="1_2l56r"]
+[ext_resource type="Texture2D" uid="uid://d04wx324wc2n4" path="res://assets/characters/oakley/idle/Oakley_idle2.png" id="2_q6qba"]
+[ext_resource type="Texture2D" uid="uid://ofrex7ukn1yv" path="res://assets/characters/oakley/idle/Oakley_idle3.png" id="3_gs35p"]
+[ext_resource type="Texture2D" uid="uid://cw5fy1kv2x40w" path="res://assets/characters/oakley/idle/Oakley_idle4.png" id="4_kmvdl"]
+[ext_resource type="Texture2D" uid="uid://b7i0hy7fch8hw" path="res://assets/characters/oakley/idle/Oakley_idle5.png" id="5_jkf1o"]
+[ext_resource type="Texture2D" uid="uid://be3hbhb4ynfeq" path="res://assets/characters/oakley/talking/oakley_talking1.png" id="6_twcl6"]
+[ext_resource type="Texture2D" uid="uid://cfqdpxwvkyuxs" path="res://assets/characters/oakley/talking/oakley_talking2.png" id="7_kjnk6"]
+[ext_resource type="Texture2D" uid="uid://cc134nsien61u" path="res://assets/characters/oakley/talking/oakley_talking3.png" id="8_nacou"]
+[ext_resource type="Texture2D" uid="uid://bt32r3bpbww4k" path="res://assets/characters/oakley/talking/oakley_talking4.png" id="9_gk5l7"]
+[ext_resource type="Texture2D" uid="uid://b0wiyar038qe6" path="res://assets/characters/oakley/talking/oakley_talking5.png" id="10_rj5sd"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2l56r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_2l56r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q6qba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gs35p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kmvdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_2l56r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jkf1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_2l56r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_2l56r")
+}, {
+"duration": 10.0,
+"texture": ExtResource("1_2l56r")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_twcl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kjnk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nacou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gk5l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rj5sd")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 24.0
+}]

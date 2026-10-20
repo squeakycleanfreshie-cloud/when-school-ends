@@ -1,0 +1,75 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dwp63iwbvb72x"]
+
+[ext_resource type="Texture2D" uid="uid://dj5xdskf8dn0l" path="res://assets/characters/chloe/idle/Chloe_Idle1.png" id="1_3x43y"]
+[ext_resource type="Texture2D" uid="uid://btwaf1ju10mvy" path="res://assets/characters/chloe/idle/Chloe_Idle2.png" id="2_jyqyw"]
+[ext_resource type="Texture2D" uid="uid://b87b5md1ndl5x" path="res://assets/characters/chloe/idle/Chloe_Idle3.png" id="3_228gx"]
+[ext_resource type="Texture2D" uid="uid://60mh7ernk4i1" path="res://assets/characters/chloe/idle/Chloe_Idle4.png" id="4_7xm62"]
+[ext_resource type="Texture2D" uid="uid://f81ck2lda1j3" path="res://assets/characters/chloe/idle/Chloe_Idle5.png" id="5_m7777"]
+[ext_resource type="Texture2D" uid="uid://1c3333r8hjsy" path="res://assets/characters/chloe/talking/chloe_talking1.png" id="6_gpsp3"]
+[ext_resource type="Texture2D" uid="uid://dnufhqpscmv3x" path="res://assets/characters/chloe/talking/chloe_talking2.png" id="7_ax543"]
+[ext_resource type="Texture2D" uid="uid://bml4ina4n1khl" path="res://assets/characters/chloe/talking/chloe_talking3.png" id="8_2jbme"]
+[ext_resource type="Texture2D" uid="uid://m35514otvxkn" path="res://assets/characters/chloe/talking/chloe_talking4.png" id="9_p5axm"]
+[ext_resource type="Texture2D" uid="uid://dun8gbygcvoo7" path="res://assets/characters/chloe/talking/chloe_talking5.png" id="10_5sldn"]
+[ext_resource type="Texture2D" uid="uid://cip6ryct03qto" path="res://assets/characters/chloe/talking/chloe_talking6.png" id="11_nj323"]
+[ext_resource type="Texture2D" uid="uid://cfuwggtli276f" path="res://assets/characters/chloe/talking/chloe_talking7.png" id="12_isjej"]
+[ext_resource type="Texture2D" uid="uid://cke2kipg46cpx" path="res://assets/characters/chloe/talking/chloe_talking8.png" id="13_1foa7"]
+[ext_resource type="Texture2D" uid="uid://bd7pmkdartyy2" path="res://assets/characters/chloe/talking/chloe_talking9.png" id="14_ddn6c"]
+[ext_resource type="Texture2D" uid="uid://cg42r3r7uesi6" path="res://assets/characters/chloe/talking/chloe_talking10.png" id="15_iembd"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3x43y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jyqyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_228gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7xm62")
+}, {
+"duration": 10.0,
+"texture": ExtResource("5_m7777")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gpsp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ax543")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2jbme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p5axm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5sldn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nj323")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_isjej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1foa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ddn6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_iembd")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 15.0
+}]

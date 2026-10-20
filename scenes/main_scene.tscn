@@ -33,7 +33,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="character" parent="CanvasLayer2/Control" unique_id=2080697567 instance=ExtResource("2_pw63i")]
-position = Vector2(580, 347.00003)
+position = Vector2(20, -198)
 scale = Vector2(3, 3)
 
 [node name="Dialog_UI" parent="CanvasLayer2" unique_id=300828050 instance=ExtResource("3_7ykc4")]

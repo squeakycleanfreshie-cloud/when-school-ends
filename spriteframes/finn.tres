@@ -1,0 +1,55 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://x18rjprgmmmj"]
+
+[ext_resource type="Texture2D" uid="uid://dmim5vyxp2wpg" path="res://assets/characters/finn/idle/Finn_Idle1.png" id="1_v7v8p"]
+[ext_resource type="Texture2D" uid="uid://byu6aswei0mgu" path="res://assets/characters/finn/idle/Finn_Idle2.png" id="2_4oqxo"]
+[ext_resource type="Texture2D" uid="uid://csu1vlf34fwda" path="res://assets/characters/finn/idle/Finn_Idle3.png" id="3_fyn7i"]
+[ext_resource type="Texture2D" uid="uid://bvx34lesyn4hh" path="res://assets/characters/finn/idle/Finn_Idle4.png" id="4_5n88r"]
+[ext_resource type="Texture2D" uid="uid://cv2hnmbhoqxfj" path="res://assets/characters/finn/idle/Finn_Idle5.png" id="5_i2pdc"]
+[ext_resource type="Texture2D" uid="uid://iqj0govgewun" path="res://assets/characters/finn/talking/finn_talking1.png" id="6_imnla"]
+[ext_resource type="Texture2D" uid="uid://dyjsjrws8fmkd" path="res://assets/characters/finn/talking/finn_talking2.png" id="7_4tf6y"]
+[ext_resource type="Texture2D" uid="uid://pwbdanbi06yu" path="res://assets/characters/finn/talking/finn_talking3.png" id="8_453cg"]
+[ext_resource type="Texture2D" uid="uid://e1xkiaq72qdh" path="res://assets/characters/finn/talking/finn_talking4.png" id="9_dbrv3"]
+[ext_resource type="Texture2D" uid="uid://bwvb1yywtjisq" path="res://assets/characters/finn/talking/finn_talking5.png" id="10_bm7a0"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v7v8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4oqxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fyn7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5n88r")
+}, {
+"duration": 10.0,
+"texture": ExtResource("5_i2pdc")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_imnla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4tf6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_453cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dbrv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bm7a0")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 15.0
+}]

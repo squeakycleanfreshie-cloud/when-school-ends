@@ -1,0 +1,55 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dl6sap6a5qu5v"]
+
+[ext_resource type="Texture2D" uid="uid://da5mgj5455hmw" path="res://assets/characters/hugo/idle/hugo_idle1.png" id="1_2efcy"]
+[ext_resource type="Texture2D" uid="uid://b03ngjecgvri3" path="res://assets/characters/hugo/idle/hugo_idle2.png" id="2_2a3uc"]
+[ext_resource type="Texture2D" uid="uid://dngukftcio7it" path="res://assets/characters/hugo/idle/hugo_idle3.png" id="3_ix0lm"]
+[ext_resource type="Texture2D" uid="uid://cnsbfl6bk7rt" path="res://assets/characters/hugo/idle/hugo_idle4.png" id="4_6y10s"]
+[ext_resource type="Texture2D" uid="uid://ch8mj76mo2jv1" path="res://assets/characters/hugo/idle/hugo_idle5.png" id="5_qa2qt"]
+[ext_resource type="Texture2D" uid="uid://dpavfrs47qbd4" path="res://assets/characters/hugo/talking/hugo_talking1.png" id="6_0c0wk"]
+[ext_resource type="Texture2D" uid="uid://b14v22ptqn1wx" path="res://assets/characters/hugo/talking/hugo_talking2.png" id="7_yalmd"]
+[ext_resource type="Texture2D" uid="uid://bd5hvj43oy8ga" path="res://assets/characters/hugo/talking/hugo_talking3.png" id="8_csr5m"]
+[ext_resource type="Texture2D" uid="uid://du2o3gwm32shb" path="res://assets/characters/hugo/talking/hugo_talking4.png" id="9_wdipy"]
+[ext_resource type="Texture2D" uid="uid://eop863b4oeqe" path="res://assets/characters/hugo/talking/hugo_talking5.png" id="10_tjsvq"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2efcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2a3uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ix0lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6y10s")
+}, {
+"duration": 10.0,
+"texture": ExtResource("5_qa2qt")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0c0wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yalmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_csr5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wdipy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tjsvq")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 15.0
+}]

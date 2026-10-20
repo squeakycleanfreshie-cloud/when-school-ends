@@ -1,0 +1,55 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dbx4bhus7aq0o"]
+
+[ext_resource type="Texture2D" uid="uid://ccxb21yvd8cpr" path="res://assets/characters/mia/idle/mia_idle1.png" id="1_pynpi"]
+[ext_resource type="Texture2D" uid="uid://rkvw2fewsmag" path="res://assets/characters/mia/idle/mia_idle2.png" id="2_5xbo7"]
+[ext_resource type="Texture2D" uid="uid://chgt8fr3hnrb" path="res://assets/characters/mia/idle/mia_idle3.png" id="3_aw0y8"]
+[ext_resource type="Texture2D" uid="uid://qowvwwscr67p" path="res://assets/characters/mia/idle/mia_idle4.png" id="4_p1vjt"]
+[ext_resource type="Texture2D" uid="uid://ddio7oetnlk5t" path="res://assets/characters/mia/idle/mia_idle5.png" id="5_vppe7"]
+[ext_resource type="Texture2D" uid="uid://2kkss4hhwory" path="res://assets/characters/mia/talking/mia_talking1.png" id="6_r1fpt"]
+[ext_resource type="Texture2D" uid="uid://ojj3djcvjaga" path="res://assets/characters/mia/talking/mia_talking2.png" id="7_v8tal"]
+[ext_resource type="Texture2D" uid="uid://cfxe5lunawi22" path="res://assets/characters/mia/talking/mia_talking3.png" id="8_r2o7a"]
+[ext_resource type="Texture2D" uid="uid://crs86fcwqn1om" path="res://assets/characters/mia/talking/mia_talking4.png" id="9_g55li"]
+[ext_resource type="Texture2D" uid="uid://03hjkukvwqcc" path="res://assets/characters/mia/talking/mia_talking5.png" id="10_067i6"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pynpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5xbo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aw0y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p1vjt")
+}, {
+"duration": 10.0,
+"texture": ExtResource("5_vppe7")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_r1fpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v8tal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r2o7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g55li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_067i6")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 15.0
+}]
