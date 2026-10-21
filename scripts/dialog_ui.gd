@@ -19,12 +19,12 @@ func _process(delta):
 			animation_done.emit()
 	pass
 
-func change_line(speaker: String, line: String):
-	speaker_name.text = speaker
+func change_line(character_name: Character.Name, line: String):
+	speaker_name.text = Character.CHARACTER_DETAILS[character_name]["name"]
 	current_visible_characters = 0
 	dialog_line.text = line
 	dialog_line.visible_characters = 0
-	animate_text = true 
+	animate_text = true
 	
 func skip_text_animation():
 	dialog_line.visible_ratio = 1
