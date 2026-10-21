@@ -1,5 +1,7 @@
 # When School Ends
 a cozy visual novel about spending the last year of school, and balancing freinds, study and fun.
+<img width="1150" height="646" alt="Screen Recording 2026-10-21 at 6 46 30 pm" src="https://github.com/user-attachments/assets/ef8f3922-1817-4986-a3fd-6a8de8242c29" />
+
 
 ## Player Guide
 
