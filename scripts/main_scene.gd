@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var character = %character
+@onready var character = %character_sprite
 @onready var dialog_ui = %Dialog_UI
 
 var dialog_index : int = 0

@@ -34,7 +34,7 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="character" parent="CanvasLayer2/Control" unique_id=2080697567 instance=ExtResource("2_pw63i")]
+[node name="character_sprite" parent="CanvasLayer2/Control" unique_id=2080697567 instance=ExtResource("2_pw63i")]
 unique_name_in_owner = true
 position = Vector2(20, -198)
 scale = Vector2(3, 3)

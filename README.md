@@ -4,11 +4,37 @@ a cozy visual novel about spending the last year of school, and balancing freind
 ## Player Guide
 
 ### Controls
+Click, press space or enter to advance to the next dialog text.
 
 ### Mechanics
 
-## Tech Stack & Architecture 
+## Tech Stack
 
 ### Game Engine
+For this project, I used Godot, programming in GDScript.
 
 ## License
+MIT License
+Copyright (c) 2026 Remy Moreau
+
+## About This Game
+
+### Inspirations
+I came up with the idea for this game when I was watching year 12 students 
+at muckup day, and suddenly this thought hit me.
+Imagine how much stress they have to deal with, and how many things they 
+have to be organised. Year 12 is kinda like a big test of your character,
+and I thought it would be prettry interesting to make a game about that.
+
+### About the Dev
+Hello! My name is Remy! I am a 15 year old programmer apart of 
+hack club! I like making simple visual novels and game in my spare 
+time on top of school. I like doing graphic design and multimedia, 
+and I really enjoyed working on the pixel art for this project. 
+
+### Why I made this
+I made this game for Hack Clubs program, Terra (terra.hackclub.com) where you code for 10h a week, 
+for 10 weeks and get a framework/ipad/tablet.
+I made this project for fun and maybe - just maybe I will put it on steam
+
+### Credits
