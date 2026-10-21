@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bey6wklc0vj6g"]
 
 [ext_resource type="SpriteFrames" uid="uid://dbx4bhus7aq0o" path="res://spriteframes/mia.tres" id="1_agfs1"]
+[ext_resource type="Script" uid="uid://qumk4dktjar6" path="res://scripts/character.gd" id="1_rkhd4"]
 
 [node name="character" type="Node2D" unique_id=2080697567]
+script = ExtResource("1_rkhd4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=32363320]
 scale = Vector2(5.087505, 5.0875053)
