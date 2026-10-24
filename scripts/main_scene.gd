@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var character = %character_sprite
 @onready var dialog_ui = %Dialog_UI
+@onready var next_scentence_sound = %NextScentenceSound
 
 var dialog_index : int = 0
 
@@ -33,6 +34,7 @@ func _input(event):
 		else:
 			if dialog_index < len(dialog_lines) - 1:
 				dialog_index += 1
+				next_scentence_sound.play()
 				process_current_line()
 
 func parse_line(line: String):

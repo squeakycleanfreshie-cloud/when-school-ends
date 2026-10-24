@@ -34,6 +34,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yjvli")
 
+[node name="ScentencePauseTimer" type="Timer" parent="." unique_id=1280573632]
+unique_name_in_owner = true
+wait_time = 0.35
+one_shot = true
+
 [node name="TextBlipTimer" type="Timer" parent="." unique_id=1149323457]
 unique_name_in_owner = true
 wait_time = 0.09

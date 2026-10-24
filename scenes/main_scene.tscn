@@ -2,11 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://bt6y3yatq371x" path="res://assets/backgrounds/classroom_BG1.png" id="1_7ykc4"]
 [ext_resource type="Script" uid="uid://drvilhehq0ch" path="res://scripts/main_scene.gd" id="1_pu3yx"]
+[ext_resource type="AudioStream" uid="uid://bmghubtx4frja" path="res://assets/sounds/sfx/paper_flick.mp3" id="2_gubc5"]
 [ext_resource type="PackedScene" uid="uid://bey6wklc0vj6g" path="res://scenes/character.tscn" id="2_pw63i"]
 [ext_resource type="PackedScene" uid="uid://3qxrq5bldbxp" path="res://scenes/dialog_ui.tscn" id="3_7ykc4"]
 
 [node name="main_scene" type="Node2D" unique_id=215371280]
 script = ExtResource("1_pu3yx")
+
+[node name="NextScentenceSound" type="AudioStreamPlayer2D" parent="." unique_id=968248856]
+unique_name_in_owner = true
+stream = ExtResource("2_gubc5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1697247942]
 layer = -1
