@@ -34,6 +34,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yjvli")
 
+[node name="TextBlipTimer" type="Timer" parent="." unique_id=1149323457]
+unique_name_in_owner = true
+wait_time = 0.09
+
 [node name="TextBlipSound" type="AudioStreamPlayer" parent="." unique_id=1139394563]
 unique_name_in_owner = true
 script = ExtResource("2_edwrk")

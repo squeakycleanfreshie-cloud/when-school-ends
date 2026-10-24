@@ -5,12 +5,16 @@ signal animation_done
 @onready var dialog_line = %Dialog_Line
 @onready var speaker_name = %Speaker_Name
 @onready var text_blip_sound = %TextBlipSound
+@onready var text_blip_timer = %TextBlipTimer
 
 const ANIMATION_SPEED : int = 30
 const NO_SOUND_CHARS : Array = [".","!","?",","]
 var animate_text : bool = false
 var current_visible_characters : int = 0
 var current_character_details : Dictionary
+
+func _ready():
+	text_blip_timer.timeout.connect(_on_text_blip_timeout)
 
 func _process(delta):
 	if animate_text:
@@ -19,10 +23,9 @@ func _process(delta):
 			if dialog_line.visible_characters > current_visible_characters:
 				current_visible_characters = dialog_line.visible_characters
 				var last_char = dialog_line.text[current_visible_characters - 1]
-				if last_char not in NO_SOUND_CHARS:
-					text_blip_sound.play_sound(current_character_details)
 		else:
 			animate_text = false
+			text_blip_timer.stop()
 			animation_done.emit()
 	pass
 
@@ -33,6 +36,11 @@ func change_line(character_name: Character.Name, line: String):
 	dialog_line.text = line
 	dialog_line.visible_characters = 0
 	animate_text = true
+	text_blip_timer.start()
 	
 func skip_text_animation():
 	dialog_line.visible_ratio = 1
+	
+func _on_text_blip_timeout():
+	text_blip_sound.play_sound(current_character_details)
+	
