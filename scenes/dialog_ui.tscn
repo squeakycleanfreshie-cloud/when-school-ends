@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="1_xh3aw"]
 [ext_resource type="Script" uid="uid://b1ebkc8mhkrtm" path="res://scripts/dialog_ui.gd" id="1_yjvli"]
+[ext_resource type="Script" uid="uid://co4iar75vfl3a" path="res://scripts/text_blip_sound.gd" id="2_edwrk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xh3aw"]
 content_margin_left = 30.0
@@ -32,6 +33,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yjvli")
+
+[node name="TextBlipSound" type="AudioStreamPlayer" parent="." unique_id=1139394563]
+unique_name_in_owner = true
+script = ExtResource("2_edwrk")
 
 [node name="Dialog_Box" type="PanelContainer" parent="." unique_id=348185025]
 custom_minimum_size = Vector2(0, 150)
