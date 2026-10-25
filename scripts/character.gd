@@ -7,7 +7,7 @@ enum Name {
 	HUGO,
 	MIA,
 	OAKLEY,
-	NARR
+	NARRARATOR
 }
 
 const CHARACTER_DETAILS : Dictionary = {
@@ -36,7 +36,7 @@ const CHARACTER_DETAILS : Dictionary = {
 		"gender": "male",
 		"sprite_frames": preload("res://spriteframes/oakley.tres")
 	},
-	Name.NARR: {
+	Name.NARRARATOR: {
 		"name": "Narrarator",
 		"gender": "male",
 		"sprite_frames": preload("res://spriteframes/narrarator.tres")
