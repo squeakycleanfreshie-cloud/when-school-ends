@@ -1,18 +1,68 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://x18rjprgmmmj"]
 
+[ext_resource type="Texture2D" uid="uid://l42i2riwjntw" path="res://assets/characters/finn/confident idle/finn_confident_idle1.png" id="1_qxp6n"]
 [ext_resource type="Texture2D" uid="uid://dmim5vyxp2wpg" path="res://assets/characters/finn/idle/Finn_Idle1.png" id="1_v7v8p"]
 [ext_resource type="Texture2D" uid="uid://byu6aswei0mgu" path="res://assets/characters/finn/idle/Finn_Idle2.png" id="2_4oqxo"]
+[ext_resource type="Texture2D" uid="uid://cvqchy8fw6s2k" path="res://assets/characters/finn/confident idle/finn_confident_idle2.png" id="2_j8grt"]
 [ext_resource type="Texture2D" uid="uid://csu1vlf34fwda" path="res://assets/characters/finn/idle/Finn_Idle3.png" id="3_fyn7i"]
+[ext_resource type="Texture2D" uid="uid://mggi6emuqq16" path="res://assets/characters/finn/confident idle/finn_confident_idle3.png" id="3_uupeg"]
 [ext_resource type="Texture2D" uid="uid://bvx34lesyn4hh" path="res://assets/characters/finn/idle/Finn_Idle4.png" id="4_5n88r"]
+[ext_resource type="Texture2D" uid="uid://cmdp02ii45wid" path="res://assets/characters/finn/confident idle/finn_confident_idle4.png" id="4_7vsjj"]
 [ext_resource type="Texture2D" uid="uid://cv2hnmbhoqxfj" path="res://assets/characters/finn/idle/Finn_Idle5.png" id="5_i2pdc"]
+[ext_resource type="Texture2D" uid="uid://bcbaom1am48mi" path="res://assets/characters/finn/confident idle/finn_confident_idle5.png" id="5_wnnbc"]
+[ext_resource type="Texture2D" uid="uid://yyd0bcblwvus" path="res://assets/characters/finn/confident_talking/finn_confident_talking1.png" id="6_epjvb"]
 [ext_resource type="Texture2D" uid="uid://iqj0govgewun" path="res://assets/characters/finn/talking/finn_talking1.png" id="6_imnla"]
 [ext_resource type="Texture2D" uid="uid://dyjsjrws8fmkd" path="res://assets/characters/finn/talking/finn_talking2.png" id="7_4tf6y"]
+[ext_resource type="Texture2D" uid="uid://cs87jx3ufyd8u" path="res://assets/characters/finn/confident_talking/finn_confident_talking2.png" id="7_lgknr"]
 [ext_resource type="Texture2D" uid="uid://pwbdanbi06yu" path="res://assets/characters/finn/talking/finn_talking3.png" id="8_453cg"]
+[ext_resource type="Texture2D" uid="uid://rqvbyiyphqbn" path="res://assets/characters/finn/confident_talking/finn_confident_talking3.png" id="8_vjp5x"]
 [ext_resource type="Texture2D" uid="uid://e1xkiaq72qdh" path="res://assets/characters/finn/talking/finn_talking4.png" id="9_dbrv3"]
+[ext_resource type="Texture2D" uid="uid://cdd6eignchyvj" path="res://assets/characters/finn/confident_talking/finn_confident_talking4.png" id="9_x65jn"]
+[ext_resource type="Texture2D" uid="uid://bb2oj0waeq1h7" path="res://assets/characters/finn/confident_talking/finn_confident_talking5.png" id="10_0py35"]
 [ext_resource type="Texture2D" uid="uid://bwvb1yywtjisq" path="res://assets/characters/finn/talking/finn_talking5.png" id="10_bm7a0"]
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 15.0,
+"texture": ExtResource("1_qxp6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j8grt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uupeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7vsjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wnnbc")
+}],
+"loop": 1,
+"name": &"confident-idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_epjvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lgknr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vjp5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x65jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0py35")
+}],
+"loop": 1,
+"name": &"confident-talking",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_v7v8p")

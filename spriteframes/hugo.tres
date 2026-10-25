@@ -1,18 +1,68 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://dl6sap6a5qu5v"]
 
 [ext_resource type="Texture2D" uid="uid://da5mgj5455hmw" path="res://assets/characters/hugo/idle/hugo_idle1.png" id="1_2efcy"]
+[ext_resource type="Texture2D" uid="uid://bfbbhlofcutjp" path="res://assets/characters/hugo/confident idle/finn_confident_idle1.png" id="1_o33u2"]
 [ext_resource type="Texture2D" uid="uid://b03ngjecgvri3" path="res://assets/characters/hugo/idle/hugo_idle2.png" id="2_2a3uc"]
+[ext_resource type="Texture2D" uid="uid://fv5fxpvtx56t" path="res://assets/characters/hugo/confident idle/finn_confident_idle2.png" id="2_ydusy"]
+[ext_resource type="Texture2D" uid="uid://bmthuc6cxwyg1" path="res://assets/characters/hugo/confident idle/finn_confident_idle3.png" id="3_3vru8"]
 [ext_resource type="Texture2D" uid="uid://dngukftcio7it" path="res://assets/characters/hugo/idle/hugo_idle3.png" id="3_ix0lm"]
 [ext_resource type="Texture2D" uid="uid://cnsbfl6bk7rt" path="res://assets/characters/hugo/idle/hugo_idle4.png" id="4_6y10s"]
+[ext_resource type="Texture2D" uid="uid://4b1rjlx5nr1g" path="res://assets/characters/hugo/confident idle/finn_confident_idle4.png" id="4_g5rtf"]
+[ext_resource type="Texture2D" uid="uid://loo1kre680e6" path="res://assets/characters/hugo/confident idle/finn_confident_idle5.png" id="5_5wijx"]
 [ext_resource type="Texture2D" uid="uid://ch8mj76mo2jv1" path="res://assets/characters/hugo/idle/hugo_idle5.png" id="5_qa2qt"]
 [ext_resource type="Texture2D" uid="uid://dpavfrs47qbd4" path="res://assets/characters/hugo/talking/hugo_talking1.png" id="6_0c0wk"]
+[ext_resource type="Texture2D" uid="uid://boy11peos221y" path="res://assets/characters/hugo/confident talking/finn_confident_talking1.png" id="6_y62bg"]
+[ext_resource type="Texture2D" uid="uid://brvia1ans1hav" path="res://assets/characters/hugo/confident talking/finn_confident_talking2.png" id="7_p35xi"]
 [ext_resource type="Texture2D" uid="uid://b14v22ptqn1wx" path="res://assets/characters/hugo/talking/hugo_talking2.png" id="7_yalmd"]
+[ext_resource type="Texture2D" uid="uid://bbyk6wrtvv3ay" path="res://assets/characters/hugo/confident talking/finn_confident_talking3.png" id="8_bk76e"]
 [ext_resource type="Texture2D" uid="uid://bd5hvj43oy8ga" path="res://assets/characters/hugo/talking/hugo_talking3.png" id="8_csr5m"]
+[ext_resource type="Texture2D" uid="uid://ldh6stkkslb" path="res://assets/characters/hugo/confident talking/finn_confident_talking4.png" id="9_0b2se"]
 [ext_resource type="Texture2D" uid="uid://du2o3gwm32shb" path="res://assets/characters/hugo/talking/hugo_talking4.png" id="9_wdipy"]
+[ext_resource type="Texture2D" uid="uid://bian7ujfb0st4" path="res://assets/characters/hugo/confident talking/finn_confident_talking5.png" id="10_h772l"]
 [ext_resource type="Texture2D" uid="uid://eop863b4oeqe" path="res://assets/characters/hugo/talking/hugo_talking5.png" id="10_tjsvq"]
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 15.0,
+"texture": ExtResource("1_o33u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ydusy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3vru8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g5rtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5wijx")
+}],
+"loop": 1,
+"name": &"confident-idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_y62bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p35xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bk76e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0b2se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h772l")
+}],
+"loop": 1,
+"name": &"confident-talking",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_2efcy")

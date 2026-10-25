@@ -1,18 +1,68 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cums8jw1hypja"]
 
+[ext_resource type="Texture2D" uid="uid://d03c4ek7hoitw" path="res://assets/characters/oakley/confident idle/oakley_confident_idle1.png" id="1_0p8cr"]
 [ext_resource type="Texture2D" uid="uid://bu8ri0kw4a7c7" path="res://assets/characters/oakley/idle/Oakley_idle1.png" id="1_2l56r"]
+[ext_resource type="Texture2D" uid="uid://ctq6kj8f40ms1" path="res://assets/characters/oakley/confident idle/oakley_confident_idle2.png" id="2_751g3"]
 [ext_resource type="Texture2D" uid="uid://d04wx324wc2n4" path="res://assets/characters/oakley/idle/Oakley_idle2.png" id="2_q6qba"]
 [ext_resource type="Texture2D" uid="uid://ofrex7ukn1yv" path="res://assets/characters/oakley/idle/Oakley_idle3.png" id="3_gs35p"]
+[ext_resource type="Texture2D" uid="uid://kp5jn74yn4qo" path="res://assets/characters/oakley/confident idle/oakley_confident_idle3.png" id="3_o7n04"]
 [ext_resource type="Texture2D" uid="uid://cw5fy1kv2x40w" path="res://assets/characters/oakley/idle/Oakley_idle4.png" id="4_kmvdl"]
+[ext_resource type="Texture2D" uid="uid://bnrwh8rrxsw6v" path="res://assets/characters/oakley/confident idle/oakley_confident_idle4.png" id="4_y1dbc"]
+[ext_resource type="Texture2D" uid="uid://b3pdyyi5ln15e" path="res://assets/characters/oakley/confident idle/oakley_confident_idle5.png" id="5_euq7l"]
 [ext_resource type="Texture2D" uid="uid://b7i0hy7fch8hw" path="res://assets/characters/oakley/idle/Oakley_idle5.png" id="5_jkf1o"]
+[ext_resource type="Texture2D" uid="uid://cdooiui2l2nc2" path="res://assets/characters/oakley/confident talking/oakley_confident_talking1.png" id="6_d87hm"]
 [ext_resource type="Texture2D" uid="uid://be3hbhb4ynfeq" path="res://assets/characters/oakley/talking/oakley_talking1.png" id="6_twcl6"]
+[ext_resource type="Texture2D" uid="uid://de1uqjy0st6fv" path="res://assets/characters/oakley/confident talking/oakley_confident_talking2.png" id="7_cgv5b"]
 [ext_resource type="Texture2D" uid="uid://cfqdpxwvkyuxs" path="res://assets/characters/oakley/talking/oakley_talking2.png" id="7_kjnk6"]
+[ext_resource type="Texture2D" uid="uid://ngqqrn7hcuu5" path="res://assets/characters/oakley/confident talking/oakley_confident_talking3.png" id="8_n2vic"]
 [ext_resource type="Texture2D" uid="uid://cc134nsien61u" path="res://assets/characters/oakley/talking/oakley_talking3.png" id="8_nacou"]
 [ext_resource type="Texture2D" uid="uid://bt32r3bpbww4k" path="res://assets/characters/oakley/talking/oakley_talking4.png" id="9_gk5l7"]
+[ext_resource type="Texture2D" uid="uid://da734effmhxn1" path="res://assets/characters/oakley/confident talking/oakley_confident_talking4.png" id="9_u4npq"]
+[ext_resource type="Texture2D" uid="uid://do4a6uvrrdi8c" path="res://assets/characters/oakley/confident talking/oakley_confident_talking5.png" id="10_ko3t5"]
 [ext_resource type="Texture2D" uid="uid://b0wiyar038qe6" path="res://assets/characters/oakley/talking/oakley_talking5.png" id="10_rj5sd"]
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 15.0,
+"texture": ExtResource("1_0p8cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_751g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_o7n04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y1dbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_euq7l")
+}],
+"loop": 1,
+"name": &"confident-idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_d87hm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cgv5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n2vic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u4npq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ko3t5")
+}],
+"loop": 1,
+"name": &"confident-talking",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_2l56r")

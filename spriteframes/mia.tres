@@ -1,18 +1,68 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://dbx4bhus7aq0o"]
 
 [ext_resource type="Texture2D" uid="uid://ccxb21yvd8cpr" path="res://assets/characters/mia/idle/mia_idle1.png" id="1_pynpi"]
+[ext_resource type="Texture2D" uid="uid://b0mbei3wmf1pu" path="res://assets/characters/mia/confident idle/mia_confident_idle1.png" id="1_x0dfe"]
 [ext_resource type="Texture2D" uid="uid://rkvw2fewsmag" path="res://assets/characters/mia/idle/mia_idle2.png" id="2_5xbo7"]
+[ext_resource type="Texture2D" uid="uid://dkn7wyijj5bo3" path="res://assets/characters/mia/confident idle/mia_confident_idle2.png" id="2_c32bc"]
 [ext_resource type="Texture2D" uid="uid://chgt8fr3hnrb" path="res://assets/characters/mia/idle/mia_idle3.png" id="3_aw0y8"]
+[ext_resource type="Texture2D" uid="uid://cp0rogfmj40px" path="res://assets/characters/mia/confident idle/mia_confident_idle3.png" id="3_tbqso"]
 [ext_resource type="Texture2D" uid="uid://qowvwwscr67p" path="res://assets/characters/mia/idle/mia_idle4.png" id="4_p1vjt"]
+[ext_resource type="Texture2D" uid="uid://bjximl1uwt42u" path="res://assets/characters/mia/confident idle/mia_confident_idle4.png" id="4_xrwi5"]
+[ext_resource type="Texture2D" uid="uid://8fxg2cr8jr44" path="res://assets/characters/mia/confident idle/mia_confident_idle5.png" id="5_b2y0e"]
 [ext_resource type="Texture2D" uid="uid://ddio7oetnlk5t" path="res://assets/characters/mia/idle/mia_idle5.png" id="5_vppe7"]
+[ext_resource type="Texture2D" uid="uid://coscm24jevjb8" path="res://assets/characters/mia/confident talking/mia_confident_talking1.png" id="6_4ed3s"]
 [ext_resource type="Texture2D" uid="uid://2kkss4hhwory" path="res://assets/characters/mia/talking/mia_talking1.png" id="6_r1fpt"]
 [ext_resource type="Texture2D" uid="uid://ojj3djcvjaga" path="res://assets/characters/mia/talking/mia_talking2.png" id="7_v8tal"]
+[ext_resource type="Texture2D" uid="uid://bqxnd30cmaw7g" path="res://assets/characters/mia/confident talking/mia_confident_talking2.png" id="7_wr2s0"]
 [ext_resource type="Texture2D" uid="uid://cfxe5lunawi22" path="res://assets/characters/mia/talking/mia_talking3.png" id="8_r2o7a"]
+[ext_resource type="Texture2D" uid="uid://cd5suvrqhtfm8" path="res://assets/characters/mia/confident talking/mia_confident_talking3.png" id="8_u2csq"]
 [ext_resource type="Texture2D" uid="uid://crs86fcwqn1om" path="res://assets/characters/mia/talking/mia_talking4.png" id="9_g55li"]
+[ext_resource type="Texture2D" uid="uid://cas7fu4fack5j" path="res://assets/characters/mia/confident talking/mia_confident_talking4.png" id="9_iwvi4"]
+[ext_resource type="Texture2D" uid="uid://dw8skl156ud5" path="res://assets/characters/mia/confident talking/mia_confident_talking5.png" id="10_8nes1"]
 [ext_resource type="Texture2D" uid="uid://03hjkukvwqcc" path="res://assets/characters/mia/talking/mia_talking5.png" id="10_067i6"]
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 15.0,
+"texture": ExtResource("1_x0dfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c32bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tbqso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xrwi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b2y0e")
+}],
+"loop": 1,
+"name": &"confident-idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4ed3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wr2s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u2csq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iwvi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8nes1")
+}],
+"loop": 1,
+"name": &"confident-talking",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_pynpi")
