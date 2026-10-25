@@ -6,22 +6,11 @@ extends Node2D
 
 var dialog_index : int = 0
 
-const dialog_lines : Array[String] = [
-	"Oakley: Come on guys, lets do this!",
-	"Finn: I'm only coming if everyone else comes.",
-	"Hugo: I'm in!",
-	"Mia: Fine. I guess I will come.",
-	"Oakley: Yes! What about you Chloe?",
-	"Chloe: I'm sorry guys, I have to study.",
-	"Chloe: I have lots of stuff on, and hanging out is one of the lower prorities on that list.",
-	"Mia: Are you sure? Please come.",
-	"Chloe: I'm sorry. I'm just really stressed at the moment",
-	"Oakley: But if you come, that could be an opportunity to de-stress.",
-	"Chloe: I guess...",
-	"Chloe: Fine, I'll come- but just this once."
-]
+var dialog_lines : Array = []
 
 func _ready():
+	
+	dialog_lines = load_dialog("res://story/story.json")
 	dialog_ui.animation_done.connect(_on_animation_done)
 	# Process first line of dialog.
 	dialog_index = 0
@@ -51,6 +40,28 @@ func process_current_line():
 	var character_name = Character.get_enum_from_string(line_info["speaker_name"])
 	dialog_ui.change_line(character_name, line_info["dialog_line"])
 	character.change_character(character_name)
+	
+func load_dialog(file_path):
+	if not FileAccess.file_exists(file_path):
+		printerr("Error: File don't even exist bro", file_path)
+		return null 
+		
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	if file == null:
+		printerr("Error: Failed to Open File", file_path)
+		return null
+	
+	var content = file.get_as_text()
+
+	
+	var json_content = JSON.parse_string(content)
+ 
+	if json_content == null:
+		printerr("Error: Failed to parse JSON", file_path)
+		return null
+	
+	
+	return json_content 
  
 func _on_animation_done():
 	character.play_idle_animation()

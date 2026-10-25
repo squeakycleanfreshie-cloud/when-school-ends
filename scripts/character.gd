@@ -6,7 +6,8 @@ enum Name {
 	FINN,
 	HUGO,
 	MIA,
-	OAKLEY
+	OAKLEY,
+	NARR
 }
 
 const CHARACTER_DETAILS : Dictionary = {
@@ -34,7 +35,12 @@ const CHARACTER_DETAILS : Dictionary = {
 		"name": "Oakley",
 		"gender": "male",
 		"sprite_frames": preload("res://spriteframes/oakley.tres")
-	}
+	},
+	Name.NARR: {
+		"name": "Narrarator",
+		"gender": "male",
+		"sprite_frames": preload("res://spriteframes/narrarator.tres")
+		}
 }
 
 static func get_enum_from_string(string_value: String) -> int:

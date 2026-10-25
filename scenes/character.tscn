@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://bey6wklc0vj6g"]
 
-[ext_resource type="SpriteFrames" uid="uid://dbx4bhus7aq0o" path="res://spriteframes/mia.tres" id="1_agfs1"]
 [ext_resource type="Script" uid="uid://qumk4dktjar6" path="res://scripts/character_sprite.gd" id="1_rkhd4"]
+[ext_resource type="SpriteFrames" uid="uid://67mrvmf2aado" path="res://spriteframes/narrarator.tres" id="2_rkhd4"]
 
 [node name="character_sprite" type="Node2D" unique_id=2080697567]
 script = ExtResource("1_rkhd4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=32363320]
 scale = Vector2(5.087505, 5.0875053)
-sprite_frames = ExtResource("1_agfs1")
-animation = &"talking"
-frame_progress = 0.071136065
+sprite_frames = ExtResource("2_rkhd4")
+animation = &"idle"
