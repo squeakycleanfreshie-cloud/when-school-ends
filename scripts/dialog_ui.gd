@@ -1,9 +1,13 @@
 extends Control
 
 signal animation_done
+signal choice_selected
+
+const ChoiceButtonScene = preload("res://scenes/player_choice.tscn")
 
 @onready var dialog_line = %Dialog_Line
 @onready var speaker_name = %Speaker_Name
+@onready var choice_list = %ChoiceList
 @onready var text_blip_sound = %TextBlipSound
 @onready var text_blip_timer = %TextBlipTimer
 @onready var scentence_pause_timer = %ScentencePauseTimer
@@ -15,6 +19,7 @@ var current_visible_characters : int = 0
 var current_character_details : Dictionary
 
 func _ready():
+	choice_list.hide()
 	text_blip_timer.timeout.connect(_on_text_blip_timeout)
 	scentence_pause_timer.timeout.connect(_on_scentence_pause_timeout)
 
@@ -53,6 +58,18 @@ func change_line(character_name: Character.Name, line: String):
 	dialog_line.visible_characters = 0
 	animate_text = true
 	text_blip_timer.start()
+	
+func display_choices(choices: Array):
+	
+	for child in choice_list.get_children():
+		child.queue_free()
+
+	for choice in choices:
+		var choice_button = ChoiceButtonScene.instantiate()
+		choice_button.text = choice["text"]
+		choice_button.pressed.connect(_on_choice_button_pressed.bind(choice["goto"]))
+		choice_list.add_child(choice_button)
+	choice_list.show()
 
 func skip_text_animation():
 	scentence_pause_timer.stop()
@@ -60,6 +77,12 @@ func skip_text_animation():
 
 func _on_text_blip_timeout():
 	text_blip_sound.play_sound(current_character_details)
+	
+
 
 func _on_scentence_pause_timeout():
 	text_blip_timer.start()
+	
+func _on_choice_button_pressed(anchor: String):
+	choice_selected.emit(anchor)
+	choice_list.hide()

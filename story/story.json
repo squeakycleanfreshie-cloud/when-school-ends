@@ -5,12 +5,31 @@
 	{"speaker": "Oakley", "text": "A new school year."},
 	{"speaker": "Oakley", "text": "Let's make this one better than last year."},
 	{"speaker": "Oakley", "text": "What am I going to focus on?"},
-	{"goto": "freinds"},
+	{"choices":
+		[
+			{"text": "Study", "goto": "study"},
+			{"text": "Friends", "goto": "friends"},
+			{"text": "Sport", "goto": "sport"}
+		]
+	},
+
+	{"anchor": "study"},
 	{"speaker": "Oakley", "text": "Study. It's the HSC, and I have to get good marks to get into the uni course I want..."},
 	{"speaker": "Oakley", "text": "If I even want to go to uni"},
-	{"anchor": "freinds"},
-	{"speaker": "Oakley", "text": "Freinds. I'm probably not going to keep in touch with freinds after high school."},
+	{"speaker": "Oakley", "text": "But am I good enough?"},
+	{"goto": "morning_choice"},
+
+	{"anchor": "friends"},
+	{"speaker": "Oakley", "text": "Friends. I'm probably not going to keep in touch with friends after high school."},
 	{"speaker": "Oakley", "text": "So I have to have the best school year of my life."},
+	{"goto": "morning_choice"},
+
+	{"anchor": "sport"},
 	{"speaker": "Oakley", "text": "Sport. I'm a track athlete, and getting scouted to go to uni."},
-	{"speaker": "Oakley", "text": "But am I good enough?"}
+	{"speaker": "Oakley", "text": "But am I good enough?"},
+	{"goto": "morning_choice"},
+
+	{"anchor": "morning_choice"},
+	{"speaker": "Oakley", "text": "But I can figure that out later."},
+	{"speaker": "Oakley", "text": "Let's get ready for school."},
 ]

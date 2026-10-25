@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://3i1t0eip4nav"]
+
+[ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="1_40y2d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3d5y4"]
+bg_color = Color(0.46092862, 0.4991113, 0.27984825, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ys628"]
+bg_color = Color(0.68785673, 0.58935416, 0.34866196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nsh5"]
+bg_color = Color(0.6509804, 0.69803923, 0.4392157, 1)
+
+[sub_resource type="Theme" id="Theme_avaca"]
+default_font = ExtResource("1_40y2d")
+Button/font_sizes/font_size = 41
+Button/fonts/font = ExtResource("1_40y2d")
+Button/styles/hover = SubResource("StyleBoxFlat_3d5y4")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_ys628")
+Button/styles/normal = SubResource("StyleBoxFlat_8nsh5")
+
+[node name="Choice1" type="Button" unique_id=245377927]
+custom_minimum_size = Vector2(700, 60)
+theme = SubResource("Theme_avaca")
+text = "This is the first choice"
