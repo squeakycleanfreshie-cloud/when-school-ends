@@ -43,4 +43,5 @@ for 10 weeks and get a framework/ipad/tablet.
 I made this project for fun and maybe - just maybe I will put it on steam
 
 ### Credits
-Right now, all the music, SFX, art is all by me (:
+Right now, all the music & art is all by me (:
+But the blip sfx are from damochas dialog bleep pack
