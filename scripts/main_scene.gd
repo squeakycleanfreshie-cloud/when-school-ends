@@ -29,9 +29,28 @@ func _input(event):
 
 func process_current_line():
 	var line = dialog_lines[dialog_index]
+	if line.has("goto"):
+		dialog_index = get_anchor_postion(line["goto"])
+		process_current_line()
+		return
+		
+	if line.has("anchor"):
+		dialog_index += 1
+		process_current_line()
+		return
+	
 	var character_name = Character.get_enum_from_string(line["speaker"])
 	dialog_ui.change_line(character_name, line["text"])
 	character.change_character(character_name)
+	
+func get_anchor_postion(anchor: String):
+	for i in range(dialog_lines.size()):
+		if dialog_lines[i].has("anchor") and dialog_lines[i]["anchor"] == anchor:
+			return i
+			
+	printerr("could not find anchor" + anchor + "")
+	return null
+			
 	
 func load_dialog(file_path):
 	if not FileAccess.file_exists(file_path):
