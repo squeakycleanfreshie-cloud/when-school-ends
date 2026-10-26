@@ -7,6 +7,7 @@ Click to advance gameplay
 Branching choices
 
 ## Player Guide
+Play the game here: https://remymorea.itch.io/when-school-ends
 
 ### Controls
 Click, press space or enter to advance to the next dialog text.
