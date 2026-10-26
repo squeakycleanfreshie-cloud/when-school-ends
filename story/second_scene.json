@@ -1,5 +1,8 @@
  [	
 	{"location": "classroom_BG1", "music": "bedroom_theme"},
 	{"speaker": "Oakley", "text": "Yoo were at school"},
+	{"speaker": "Oakley", "text": "Yoo were at school"},
+	{"speaker": "Oakley", "text": "Yoo were at school"},
+	{"speaker": "Oakley", "text": "Yoo were at school"},
 	{"next_scene": "", "transition": "fade"}
 ]

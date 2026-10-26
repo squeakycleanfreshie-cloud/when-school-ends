@@ -92,3 +92,10 @@ func _on_choice_selected(anchor: String):
 	dialog_index = get_anchor_postion(anchor )
 	process_current_line()
 	next_scentence_sound.play()
+
+
+
+func _on_exit_pressed() -> void:
+	#credits
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	pass

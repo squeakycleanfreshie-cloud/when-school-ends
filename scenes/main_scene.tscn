@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bey6wklc0vj6g" path="res://scenes/character.tscn" id="2_pw63i"]
 [ext_resource type="PackedScene" uid="uid://3qxrq5bldbxp" path="res://scenes/dialog_ui.tscn" id="3_7ykc4"]
 [ext_resource type="Texture2D" uid="uid://bo7h8jrwi0b1m" path="res://assets/backgrounds/bedroom1.jpg" id="3_gubc5"]
+[ext_resource type="Texture2D" uid="uid://cnyy40n037yur" path="res://assets/icons/home_icon.png" id="6_c16ls"]
+[ext_resource type="Texture2D" uid="uid://oa8eoh4870he" path="res://assets/icons/settings_icon.png" id="7_18nlu"]
 
 [node name="main_scene" type="Node2D" unique_id=215371280]
 script = ExtResource("1_pu3yx")
@@ -46,3 +48,23 @@ scale = Vector2(3, 3)
 
 [node name="Dialog_UI" parent="CanvasLayer2" unique_id=300828050 instance=ExtResource("3_7ykc4")]
 unique_name_in_owner = true
+
+[node name="exit" type="Button" parent="." unique_id=783317168]
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 93.0
+offset_bottom = 76.0
+icon = ExtResource("6_c16ls")
+flat = true
+expand_icon = true
+
+[node name="Button2" type="Button" parent="." unique_id=722656176]
+offset_left = 81.0
+offset_top = 5.0
+offset_right = 152.0
+offset_bottom = 77.0
+icon = ExtResource("7_18nlu")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

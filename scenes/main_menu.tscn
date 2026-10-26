@@ -24,6 +24,8 @@ Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("2_rtw2f")
 Button/styles/normal = SubResource("StyleBoxFlat_5s6cn")
 
+[sub_resource type="Theme" id="Theme_oa1go"]
+
 [node name="main_menu" type="Control" unique_id=218771665]
 layout_mode = 3
 anchors_preset = 15
@@ -114,6 +116,16 @@ offset_right = 643.0
 offset_bottom = 507.0
 texture = ExtResource("6_5dd4i")
 stretch_mode = 4
+
+[node name="Button4" type="Button" parent="." unique_id=1442034262]
+visible = false
+layout_mode = 0
+offset_left = 408.0
+offset_top = 159.0
+offset_right = 758.0
+offset_bottom = 276.0
+theme = SubResource("Theme_oa1go")
+text = "exit"
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button2_pressed"]
