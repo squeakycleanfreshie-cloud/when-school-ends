@@ -10,4 +10,4 @@ script = ExtResource("1_rkhd4")
 scale = Vector2(5.087505, 5.0875053)
 sprite_frames = ExtResource("2_rkhd4")
 animation = &"confident-talking"
-frame_progress = 0.9590027
+frame_progress = 0.90730023

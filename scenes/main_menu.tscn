@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://r6yy7cy22fk8"]
+
+[ext_resource type="Texture2D" uid="uid://d2fyul0ox4ib4" path="res://assets/backgrounds/school1.jpg" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://cxofajvemjn1n" path="res://scripts/main_menu.gd" id="1_oa1go"]
+[ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="2_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://ccxb21yvd8cpr" path="res://assets/characters/mia/idle/mia_idle1.png" id="3_oa1go"]
+[ext_resource type="Texture2D" uid="uid://byu6aswei0mgu" path="res://assets/characters/finn/idle/Finn_Idle2.png" id="4_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://de1p66cf0ktkr" path="res://assets/characters/chloe/confident idle/chloe_confident_idle3.png" id="5_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://be3hbhb4ynfeq" path="res://assets/characters/oakley/talking/oakley_talking1.png" id="6_5dd4i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2kj2"]
+bg_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
+
+[sub_resource type="Theme" id="Theme_dba77"]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("2_rtw2f")
+Button/styles/normal = SubResource("StyleBoxFlat_n2kj2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s6cn"]
+bg_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
+
+[sub_resource type="Theme" id="Theme_usdog"]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("2_rtw2f")
+Button/styles/normal = SubResource("StyleBoxFlat_5s6cn")
+
+[node name="main_menu" type="Control" unique_id=218771665]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oa1go")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=475084951]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_l6cm7")
+
+[node name="Label" type="Label" parent="." unique_id=713779742]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 496.0
+offset_right = 1087.0
+offset_bottom = 822.0
+theme_override_fonts/font = ExtResource("2_rtw2f")
+theme_override_font_sizes/font_size = 141
+text = "When School Ends"
+
+[node name="Button" type="Button" parent="." unique_id=1708651966]
+layout_mode = 0
+offset_left = 783.0
+offset_top = 307.0
+offset_right = 1077.0
+offset_bottom = 388.0
+theme = SubResource("Theme_dba77")
+text = "credits"
+
+[node name="Button3" type="Button" parent="." unique_id=495734677]
+layout_mode = 0
+offset_left = 783.0
+offset_top = 216.0
+offset_right = 1077.0
+offset_bottom = 297.0
+theme = SubResource("Theme_usdog")
+text = "options"
+
+[node name="Button2" type="Button" parent="." unique_id=1481598234]
+layout_mode = 0
+offset_left = 783.0
+offset_top = 127.0
+offset_right = 1077.0
+offset_bottom = 208.0
+theme = SubResource("Theme_usdog")
+text = "new game"
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=593252058]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 146.0
+offset_right = 477.0
+offset_bottom = 495.0
+texture = ExtResource("3_oa1go")
+stretch_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=519863208]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 147.0
+offset_right = 341.0
+offset_bottom = 498.0
+texture = ExtResource("4_tbmy8")
+stretch_mode = 4
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=1429504619]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 144.0
+offset_right = 178.0
+offset_bottom = 493.0
+texture = ExtResource("5_jk1qb")
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=567775407]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 150.0
+offset_right = 643.0
+offset_bottom = 507.0
+texture = ExtResource("6_5dd4i")
+stretch_mode = 4
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button2_pressed"]

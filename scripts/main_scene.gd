@@ -10,12 +10,11 @@ var dialog_lines : Array = []
 
 func _ready():
 	
-	dialog_lines = load_dialog("res://story/story.json")
+	dialog_lines = load_dialog("res://story/second_scene.json")
 	dialog_ui.animation_done.connect(_on_animation_done)
 	dialog_ui.choice_selected.connect(_on_choice_selected)
-	# Process first line of dialog.
 	dialog_index = 0
-	process_current_line()
+	process_current_line() 
 
 func _input(event):
 	var line = dialog_lines[dialog_index]
@@ -32,6 +31,12 @@ func _input(event):
 
 func process_current_line():
 	var line = dialog_lines[dialog_index]
+	
+	if line.has("location"):
+		dialog_index += 1
+		process_current_line()
+		return
+	
 	if line.has("goto"):
 		dialog_index = get_anchor_postion(line["goto"])
 		process_current_line()
