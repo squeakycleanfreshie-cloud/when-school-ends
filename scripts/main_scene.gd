@@ -10,7 +10,7 @@ var dialog_lines : Array = []
 
 func _ready():
 	
-	dialog_lines = load_dialog("res://story/second_scene.json")
+	dialog_lines = load_dialog("res://story/first_scene.json")
 	dialog_ui.animation_done.connect(_on_animation_done)
 	dialog_ui.choice_selected.connect(_on_choice_selected)
 	dialog_index = 0
@@ -20,14 +20,13 @@ func _input(event):
 	var line = dialog_lines[dialog_index]
 	var has_choices = line.has("choices")
 	if event.is_action_pressed("next_line") and not has_choices:
-		if event.is_action_pressed("next_line"):
-			if dialog_ui.animate_text:
-				dialog_ui.skip_text_animation()
-			else:
-				if dialog_index < len(dialog_lines) - 1:
-					dialog_index += 1
-					next_scentence_sound.play()
-					process_current_line()
+		if dialog_ui.animate_text:
+			dialog_ui.skip_text_animation()
+		else:
+			if dialog_index < len(dialog_lines) - 1:
+				dialog_index += 1
+				next_scentence_sound.play()
+				process_current_line()
 
 func process_current_line():
 	var line = dialog_lines[dialog_index]
@@ -75,13 +74,11 @@ func load_dialog(file_path):
 	
 	var content = file.get_as_text()
 
-	
 	var json_content = JSON.parse_string(content)
  
 	if json_content == null:
 		printerr("Error: Failed to parse JSON", file_path)
 		return null
-	
 	
 	return json_content 
  
@@ -89,13 +86,9 @@ func _on_animation_done():
 	character.play_idle_animation()
 	
 func _on_choice_selected(anchor: String):
-	dialog_index = get_anchor_postion(anchor )
+	dialog_index = get_anchor_postion(anchor)
 	process_current_line()
 	next_scentence_sound.play()
 
-
-
-func _on_exit_pressed() -> void:
-	#credits
+func _on_exit_pressed():
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-	pass
