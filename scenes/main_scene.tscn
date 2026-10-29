@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bmghubtx4frja" path="res://assets/sounds/sfx/paper_flick.mp3" id="2_gubc5"]
 [ext_resource type="PackedScene" uid="uid://bey6wklc0vj6g" path="res://scenes/character.tscn" id="2_pw63i"]
 [ext_resource type="PackedScene" uid="uid://3qxrq5bldbxp" path="res://scenes/dialog_ui.tscn" id="3_7ykc4"]
-[ext_resource type="Texture2D" uid="uid://bo7h8jrwi0b1m" path="res://assets/backgrounds/bedroom1.jpg" id="3_gubc5"]
+[ext_resource type="Texture2D" uid="uid://bo7h8jrwi0b1m" path="res://assets/backgrounds/bedroom.jpg" id="3_gubc5"]
 [ext_resource type="Texture2D" uid="uid://cnyy40n037yur" path="res://assets/icons/home_icon.png" id="6_c16ls"]
 [ext_resource type="Texture2D" uid="uid://oa8eoh4870he" path="res://assets/icons/settings_icon.png" id="7_18nlu"]
 [ext_resource type="Script" uid="uid://b5w2qhibytdir" path="res://scripts/exit.gd" id="7_c1pb6"]
@@ -20,6 +20,7 @@ stream = ExtResource("2_gubc5")
 layer = -1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=478818721]
+unique_name_in_owner = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

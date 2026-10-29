@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var background = %TextureRect
 @onready var character = %character_sprite
 @onready var dialog_ui = %Dialog_UI
 @onready var next_scentence_sound = %NextScentenceSound
@@ -29,9 +30,17 @@ func _input(event):
 				process_current_line()
 
 func process_current_line():
+	if dialog_index >= dialog_lines.size() or dialog_index < 0:
+		printerr("dialog index out of bounds")
+		return
+	
 	var line = dialog_lines[dialog_index]
+	if line.has("next_scene"):
+		return
 	
 	if line.has("location"):
+		var background_file = "res://assets/backgrounds/" + line["location"] + ".jpg"
+		background.texture = load(background_file)
 		dialog_index += 1
 		process_current_line()
 		return

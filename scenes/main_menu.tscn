@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://r6yy7cy22fk8"]
 
-[ext_resource type="Texture2D" uid="uid://d2fyul0ox4ib4" path="res://assets/backgrounds/school1.jpg" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://d2fyul0ox4ib4" path="res://assets/backgrounds/school.jpg" id="1_l6cm7"]
 [ext_resource type="Script" uid="uid://cxofajvemjn1n" path="res://scripts/main_menu.gd" id="1_oa1go"]
 [ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="2_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://ccxb21yvd8cpr" path="res://assets/characters/mia/idle/mia_idle1.png" id="3_oa1go"]
