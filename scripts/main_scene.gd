@@ -10,7 +10,7 @@ var dialog_lines : Array = []
 
 func _ready():
 	
-	dialog_lines = load_dialog("res://story/first_scene.json")
+	dialog_lines = load_dialog("res://story/second_scene.json")
 	dialog_ui.animation_done.connect(_on_animation_done)
 	dialog_ui.choice_selected.connect(_on_choice_selected)
 	dialog_index = 0
@@ -46,12 +46,23 @@ func process_current_line():
 		process_current_line()
 		return
 		
+	if line.has("show_character"):
+		var shown_name = Character.get_enum_from_string(line["show_character"])
+		character.change_character(shown_name, false, line.get("expression", ""))
+	elif line.has("speaker"):
+		var speaker_char = Character.get_enum_from_string(line["speaker"])
+		character.change_character(speaker_char, true, line.get("expression", ""))
+	
 	if line.has("choices"):
 		dialog_ui.display_choices(line["choices"])
+	elif line.has("text"):
+		var speaker_name = Character.get_enum_from_string(line.get("speaker", ""))
+		dialog_ui.change_line(speaker_name, line["text"])
 	else:
-		var character_name = Character.get_enum_from_string(line["speaker"])
-		dialog_ui.change_line(character_name, line["text"])
-		character.change_character(character_name)
+		if dialog_index < len(dialog_lines) - 1:
+			dialog_index += 1
+			process_current_line()
+		return
 	
 func get_anchor_postion(anchor: String):
 	for i in range(dialog_lines.size()):

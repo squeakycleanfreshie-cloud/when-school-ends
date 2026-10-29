@@ -5,15 +5,25 @@ extends Node2D
 func _ready():
 	pass
 
-func change_character(character_name : Character.Name, is_talking : bool = true):
+func change_character(character_name : Character.Name, is_talking : bool, expression: String):
 	var sprite_frames = Character.CHARACTER_DETAILS[character_name]["sprite_frames"]
+	var stance = "talking" if is_talking else "idle"
+	var animation_name = expression + "-" + stance if expression else stance
 	if sprite_frames:
 		animated_sprite.sprite_frames = sprite_frames
-		if is_talking:
-			animated_sprite.play("talking")
+		if animated_sprite.sprite_frames.has_animation(animation_name):
+			animated_sprite.play(animation_name)
 		else:
-			animated_sprite.play("idle")
+			animated_sprite.play(stance)
+	else:
+		play_idle_animation()
 		
 
 func play_idle_animation():
-	animated_sprite.play("idle")
+	var last_animation = animated_sprite.animation
+	if last_animation and not last_animation.ends_with("-idle"):
+		var idle_expression = last_animation.replace("talking","idle")
+		if animated_sprite.sprite_frames.has_animation(idle_expression):
+			animated_sprite.play(idle_expression)
+		else:
+			animated_sprite.play("idle")
