@@ -5,7 +5,7 @@ signal transition_in_completed
 
 var transition_layer: CanvasLayer
 var transition_rect: ColorRect
-var transition_time: float = 0.7
+var transition_time: float = 2
 
 func _ready() -> void:
 	transition_layer = CanvasLayer.new()
@@ -16,8 +16,8 @@ func _ready() -> void:
 	transition_rect.anchor_bottom = 1.0
 	transition_rect.visible = false
 	transition_layer.add_child(transition_rect)
-	get_tree().root.add_child(transition_layer)
-	
+	get_tree().root.add_child.call_deferred(transition_layer)
+
 func transition_out(effect: String = "fade"):
 	match effect:
 		"fade":
@@ -26,7 +26,7 @@ func transition_out(effect: String = "fade"):
 			_slide_out()
 		_:
 			_fade_out()
-				
+
 func transition_in(effect: String = "fade"):
 	match effect:
 		"fade":
@@ -34,18 +34,17 @@ func transition_in(effect: String = "fade"):
 		"slide":
 			_slide_in()
 		_:
-			_fade_out()
-			
+			_fade_in()
+
 func _fade_out():
 	transition_rect.position = Vector2.ZERO
 	transition_rect.modulate.a = 0
 	transition_rect.z_index = 999
 	transition_rect.visible = true
 	var tween = create_tween()
-	tween.tween_property(transition_rect, "modulate.a", 1.0, transition_time)
+	tween.tween_property(transition_rect, "modulate:a", 1.0, transition_time)
 	tween.tween_callback(func():
 		transition_out_completed.emit())
-		
 
 func _fade_in():
 	transition_rect.position = Vector2.ZERO
@@ -53,11 +52,11 @@ func _fade_in():
 	transition_rect.z_index = 999
 	transition_rect.visible = true
 	var tween = create_tween()
-	tween.tween_property(transition_rect, "modulate.a", 1.0, transition_time)
+	tween.tween_property(transition_rect, "modulate:a", 0.0, transition_time)
 	tween.tween_callback(func():
 		transition_rect.visible = false
 		transition_in_completed.emit())
-		
+
 func _slide_out():
 	transition_rect.modulate.a = 1
 	transition_rect.visible = true
@@ -70,7 +69,7 @@ func _slide_out():
 	tween.tween_callback(func():
 		transition_out_completed.emit()
 	)
-		
+
 func _slide_in():
 	transition_rect.modulate.a = 1
 	transition_rect.visible = true
@@ -84,5 +83,3 @@ func _slide_in():
 		transition_rect.visible = false
 		transition_in_completed.emit()
 	)
-	
-	
