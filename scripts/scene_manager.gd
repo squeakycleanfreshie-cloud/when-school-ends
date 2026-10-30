@@ -58,8 +58,31 @@ func _fade_in():
 		transition_rect.visible = false
 		transition_in_completed.emit())
 		
-func _slide_in():
-	pass
-	
 func _slide_out():
-	pass
+	transition_rect.modulate.a = 1
+	transition_rect.visible = true
+	transition_rect.z_index = 999
+	var viewport_size = get_viewport_rect().size
+	transition_rect.position.x = viewport_size.x
+	transition_rect.position.y = 0
+	var tween = create_tween()
+	tween.tween_property(transition_rect, "position:x", 0, transition_time)
+	tween.tween_callback(func():
+		transition_out_completed.emit()
+	)
+		
+func _slide_in():
+	transition_rect.modulate.a = 1
+	transition_rect.visible = true
+	transition_rect.z_index = 999
+	var viewport_size = get_viewport_rect().size
+	transition_rect.position.x = 0
+	transition_rect.position.y = 0
+	var tween = create_tween()
+	tween.tween_property(transition_rect, "position:x", -viewport_size.x, transition_time)
+	tween.tween_callback(func():
+		transition_rect.visible = false
+		transition_in_completed.emit()
+	)
+	
+	
