@@ -1,8 +1,40 @@
 [
-	{"location": "school", "music": "bedroom_theme"},
-	{"speaker": "Oakley","text": "Yoo were at school"},
-	{"speaker": "Oakley","text": "Yoo were at school"},
-	{"speaker": "Oakley", "expression": "confident", "text": "Yoo were at school"},
+	{"location": "school", "music": "school_theme"},
+	{"speaker": "Narrarator", "text": "The summer air is warm and fresh"},
+	{"speaker": "Narrarator", "text": "You drove here"},
+	{"speaker": "Narrarator", "text": "You look around the quad for your group of freinds"},
+	{"speaker": "Narrarator", "text": "but you can't find them"},
+	{"speaker": "Oakley", "text": " the bell is about to go soon anyway."},
+	{"speaker": "Narrarator", "text": "You spot them playing basketball together"},
+	{"speaker": "Oakley", "text": "Hey guys!"},
+	{"speaker": "hugo", "text": "Hey Oakley"},
+	{"speaker": "finn", "text": "Hi! How were your holidays?"},
+	{"choices":
+		[
+			{"text": "Great", "goto": "great"},
+			{"text": "Good", "goto": "good"},
+			{"text": "Fine", "goto": "fine"},
+			{"text": "Bad", "goto": "bad"}
+		]
+	},
+	{"anchor": "great"},
+	{"speaker": "Oakley", "text": "They were great!"},
+	{"speaker": "Oakley", "text": "I went to thailand"},
+	{"speaker": "Oakley", "expression": "confident", "text": "and the food was sooo good!"},
+	{"speaker": "Oakley", "text": "how about you guys?"},
+	{"goto": "post_holidy_convo_end" },
+	
+	{"anchor": "good"},
+	{"goto": "post_holidy_convo_end" },
+	
+	{"anchor": "fine"},
+	{"goto": "post_holidy_convo_end" },
+	
+	{"anchor": "bad"},
+	{"goto": "post_holidy_convo_end" },
+	
+	{"anchor":"post_holidy_convo_end"},
+	{"speaker": "Oakley", "expression": "confident", "text": "Go"},
 	{"speaker": "Oakley", "text": "Yoo were at school"},
 	{"next_scene": "", "transition": "fade"}
 ]

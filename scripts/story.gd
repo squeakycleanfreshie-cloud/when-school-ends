@@ -1,16 +1,40 @@
-# [
-#	{"speaker": "Narrarator", "text": "The sun shines on your face"},
-#	{"speaker": "Narrarator", "text": "You feel refreshed for the new school year"},
-#	{"speaker": "Oakley", "text": "I'm ready for this"},
-#	{"speaker": "Oakley", "text": "A new school year."},
-#	{"speaker": "Oakley", "text": "Let's make this one better than last year."},
-#	{"speaker": "Oakley", "text": "What am I going to focus on?"},
-#	{"goto": "freinds"},
-#	{"speaker": "Oakley", "text": "Study. It's the HSC, and I have to get good marks to get into the uni course I want..."},
-#	{"speaker": "Oakley", "text": "If I even want to go to uni"},
-#	{"anchor": "freinds"},
-#	{"speaker": "Oakley", "text": "Freinds. I'm probably not going to keep in touch with freinds after high school."},
-#	{"speaker": "Oakley", "text": "So I have to have the best school year of my life."},
-#	{"speaker": "Oakley", "text": "Sport. I'm a track athlete, and getting scouted to go to uni."},
-#	{"speaker": "Oakley", "text": "But am I good enough?"}
-# ]
+[
+	{"location": "school", "music": "school_theme"},
+	{"speaker": "Narrarator", "text": "The summer air is warm and fresh"},
+	{"speaker": "Narrarator", "text": "You drove here"},
+	{"speaker": "Narrarator", "text": "You look around the quad for your group of freinds"},
+	{"speaker": "Narrarator", "text": "but you can't find them"},
+	{"speaker": "Oakley", "text": " the bell is about to go soon anyway."},
+	{"speaker": "Narrarator", "text": "You spot them playing basketball together"},
+	{"speaker": "Oakley", "text": "Hey guys!"},
+	{"speaker": "hugo", "text": "Hey Oakley"},
+	{"speaker": "finn", "text": "Hi! How were your holidays?"},
+	{"choices":
+		[
+			{"text": "Great", "goto": "great"},
+			{"text": "Good", "goto": "good"},
+			{"text": "Fine", "goto": "fine"},
+			{"text": "Bad", "goto": "bad"}
+		]
+	},
+	{"anchor": "great"},
+	{"speaker": "Oakley", "text": "They were great!"},
+	{"speaker": "Oakley", "text": "I went to thailand"},
+	{"speaker": "Oakley", "text": "and the food was sooo good!"},
+	{"speaker": "Oakley", "text": "how about you guys?"},
+	{"goto": "post_holidy_convo_end" },
+	
+	{"anchor": "good"},
+	{"goto": "post_holidy_convo_end" },
+	
+	{"anchor": "fine"},
+	{"goto": "post_holidy_convo_end" },
+	
+	{"anchor": "bad"},
+	{"goto": "post_holidy_convo_end" },
+	
+	{"anchor":"post_holidy_convo_end"},
+	{"speaker": "Oakley", "expression": "confident", "text": "Go"},
+	{"speaker": "Oakley", "text": "Yoo were at school"},
+	{"next_scene": "", "transition": "fade"}
+]
