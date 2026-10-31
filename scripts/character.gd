@@ -8,6 +8,7 @@ enum Name {
 	MIA,
 	OAKLEY,
 	NARRARATOR
+	BARISTA
 }
 
 const CHARACTER_DETAILS : Dictionary = {
@@ -42,6 +43,12 @@ const CHARACTER_DETAILS : Dictionary = {
 		"sprite_frames": preload("res://spriteframes/narrarator.tres")
 		}
 }
+	Name.BARISTA: {
+		"name": "Barista",
+		"gender": "male",
+		"sprite_frames": preload("res://spriteframes/narrarator.tres")
+		}
+
 
 static func get_enum_from_string(string_value: String) -> int:
 	var upper_string = string_value.to_upper()

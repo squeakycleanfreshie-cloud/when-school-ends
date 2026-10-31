@@ -78,12 +78,82 @@
 	{"goto": "post_breakfast_meal"},
 
 	{"anchor": "nutella"},
-
+	{"speaker": "Narrarator", "text": "You get out the nutella and put a croissiont in the air fryer"},
+	{"speaker": "Narrarator", "text": "But the jar of nutella is empty"},
+	{"speaker": "Narrarator", "text": "When the croissont comes out you scrape up the last bits of the jar"},
+	{"speaker": "Narrarator", "text": "But there is not much left"},
+	{"speaker": "Narrarator", "text": "You eat the croissont"},
+	{"speaker": "Narrarator", "text": "It still tastes good though theres not much nutella"},
 	{"goto": "post_breakfast_meal"},
-	{"speaker": "Oakley", "text": "You get out the nutella and put a croissiont in the air fryer"},
-	{"speaker": "Oakley", "text": "But the jar of nutella is empty"},
-	{"speaker": "Oakley", "text": "When the croissont comes out you scrape up the last bits of the jar"},
-	{"speaker": "Oakley", "text": "But there is not much left"},
-	{"anchor": "post_breakfast_meal"}
+
+	{"anchor": "post_breakfast_meal"},
+	{"speaker": "Narrarator", "text": "Your stomach is full, and its time to go to school"},
+	{"speaker": "Narrarator", "text": "ADD IN VEIW FROM CAR BACKGROUND HERE"},
+	{"speaker": "Narrarator", "text": "You have some time to get a drink from a cafe"},
+	{"choices":
+		[
+			{"text": "Go to Cafe", "goto": "cafe_stop"},
+			{"text": "Go To School", "goto": "school"}
+		]
+	},
+
+	{"anchor": "cafe_stop"},
+	{"speaker": "Narrarator", "text": "You take the turn towards your favourite cafe"},
+	{"speaker": "Narrarator", "text": "You drive into a parking spot and walk inside the cafe"},
+	{"speaker": "Narrarator", "text": "CHANGE SCENE TO CAFE SCENE"},
+	{"speaker": "Narrarator", "text": "What drink do you order?"},
+	{"choices":
+		[
+			{"text": "Hot Chocolate", "goto": "choc"},
+			{"text": "Coffee", "goto": "coffee"},
+			{"text": "Iced Matcha", "goto": "matcha"}
+		]
+	},
+
+	{"anchor": "choc"},
+
+	{"anchor": "coffee"},
+
+	{"anchor": "matcha"},
+	{"speaker": "Oakley", "text": "Could I please have an Iced Matcha?"},
+	{"speaker": "Narrarator", "text": "NOTE - CHANGE TO NEW CHAR - Sure thing."},
+	{"speaker": "Narrarator", "text": "NOTE - CHANGE TO NEW CHAR - Would you like any cold foam?"},
+	{"speaker": "Oakley", "text": "uhh"},
+	{"choices":
+		[
+			{"text": "Strawberry Cold Foam", "goto": "straw"},
+			{"text": "Vanilla Cold Foam", "goto": "vanilla"},
+			{"text": "No Cold Foam", "goto": "no"}
+		]
+	},
+
+	{"anchor": "straw"},
+	{"speaker": "Oakley", "text": "Strawberry Please"},
+	{"speaker": "Narrarator", "text": "NOTE - CHANGE TO NEW CHAR - Sounds Great."},
+	{"speaker": "Narrarator", "text": "It will be 5 mins."},
+	{"goto": "post_foam"},
+
+	{"anchor": "vanilla"},
+	{"speaker": "Oakley", "text": "Vanilla Please"},
+	{"speaker": "Narrarator", "text": "NOTE - CHANGE TO NEW CHAR - Sounds Great."},
+	{"speaker": "Narrarator", "text": "It will be 5 mins."},
+	{"goto": "post_foam"},
+
+	{"anchor": "no"},
+	{"speaker": "Oakley", "text": "No thanks."},
+	{"speaker": "Narrarator", "text": "NOTE - CHANGE TO NEW CHAR - Sounds Great."},
+	{"speaker": "Narrarator", "text": "It will be 3 mins."},
+	{"goto": "post_foam"},
+
+	{"anchor":"post_foam"},
+	{"speaker": "Narrarator", "text": "You sit down and wait for your drink."},
+
+	{"anchor": "school"},
+
+
+
+
+	{"anchor":"post_cafe"},
+	{"speaker": "Narrarator", "text": "On the way there you almost hit somebody"},
 	{"next_scene": "second_scene", "transition": "fade"}
 ]
