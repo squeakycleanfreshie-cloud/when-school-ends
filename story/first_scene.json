@@ -5,6 +5,11 @@
 	{"speaker": "Oakley", "text": "I'm ready for this"},
 	{"speaker": "Oakley", "text": "A new school year."},
 	{"speaker": "Oakley", "text": "Let's make this one better than last year."},
+	{"speaker": "Oakley", "text": "The holidays were fun."},
+	{"speaker": "Oakley", "text": "But I don't think I hung out with my freinds as much as I wanted to"},
+	{"speaker": "Oakley", "text": "I gotta be more organised."},
+	{"speaker": "Oakley", "text": "Lets at least start the year off well."},
+	{"speaker": "Oakley", "text": "Lets set an intention for next year."},
 	{"speaker": "Oakley", "text": "What am I going to focus on?"},
 	{"choices":
 		[
@@ -29,5 +34,56 @@
 	{"anchor": "morning_choice"},
 	{"speaker": "Oakley", "text": "But I can figure that out later."},
 	{"speaker": "Oakley", "text": "Let's get ready for school."},
+	{"speaker": "Narrarator", "text": "You put on your uniform and walk out of your room to get some breakfast"},
+	{"speaker": "Narrarator", "text": "ADD LIVING ROOM BG HERE WHEN READY"},
+	{"speaker": "Oakley", "text": "Mum and Dad are already at work."},
+	{"speaker": "Narrarator", "text": "You walk over to the kitchen and don't know what to make."},
+	{"speaker": "Narrarator", "text": "What do you make?"},
+	{"choices":
+		[
+			{"text": "Avo Toast", "goto": "avo"},
+			{"text": "Cereal", "goto": "cereal"},
+			{"text": "Nutella Croissont", "goto": "nutella"}
+		]
+	},
+	{"anchor": "avo"},
+	{"speaker": "Oakley", "text": "Yum."},
+	{"speaker": "Narrarator", "text": "You spot some avocadoes on the countertop"},
+	{"speaker": "Narrarator", "text": "But they are rock hard"},
+	{"speaker": "Narrarator", "text": "But you still decide to make it."},
+	{"speaker": "Narrarator", "text": "You mash up the avocadoes, add salt and pepper and put a slice of bread in the toaster"},
+	{"speaker": "Narrarator", "text": "You get a plate and plate up your breakfast."},
+	{"speaker": "Narrarator", "text": "It tastes pretty good, but would have been better with ripe avocadoes"},
+	{"goto": "post_breakfast_meal"},
+
+	{"anchor": "cereal"},
+	{"speaker": "Oakley", "text": "You get out some weetbix out of the pantry and some milk out of the fridge."},
+	{"speaker": "Oakley", "text": "Milk or weetbix first?"},
+	{"choices":
+		[
+			{"text": "Milk", "goto": "avo"},
+			{"text": "weetbix", "goto": "weetbix"}
+		]
+	},
+
+	{"anchor": "milk"},
+	{"speaker": "Narrarator", "text": "You might secretley we a cereal killer. Or just a silly guy."},
+	{"speaker": "Narrarator", "text": "But you pour the milk in first."},
+	{"speaker": "Narrarator", "text": "And eat your weet bix in peace."},
+	{"goto": "post_breakfast_meal"},
+
+	{"anchor": "weetbix"},
+	{"speaker": "Narrarator", "text": "You do it the normal way"},
+	{"speaker": "Narrarator", "text": "And eat your weet bix in peace."},
+	{"goto": "post_breakfast_meal"},
+
+	{"anchor": "nutella"},
+
+	{"goto": "post_breakfast_meal"},
+	{"speaker": "Oakley", "text": "You get out the nutella and put a croissiont in the air fryer"},
+	{"speaker": "Oakley", "text": "But the jar of nutella is empty"},
+	{"speaker": "Oakley", "text": "When the croissont comes out you scrape up the last bits of the jar"},
+	{"speaker": "Oakley", "text": "But there is not much left"},
+	{"anchor": "post_breakfast_meal"}
 	{"next_scene": "second_scene", "transition": "fade"}
 ]
