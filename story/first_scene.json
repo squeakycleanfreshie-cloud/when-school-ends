@@ -93,7 +93,7 @@
 	{"choices":
 		[
 			{"text": "Go to Cafe", "goto": "cafe_stop"},
-			{"text": "Go To School", "goto": "school"}
+			{"text": "Go To School", "goto": "post_cafe"}
 		]
 	},
 
@@ -111,8 +111,15 @@
 	},
 
 	{"anchor": "choc"},
+	{"speaker": "Oakley", "text": "Could I please get a hot chocolate"},
+	{"speaker": "Narrarator", "text": "NOTE - CHANGE TO NEW CHAR - Sure thing."},
+	{"goto": "post_foam"},
+
 
 	{"anchor": "coffee"},
+	{"speaker": "Oakley", "text": "Could I please get a flat white?"},
+	{"speaker": "Narrarator", "text": "NOTE - CHANGE TO NEW CHAR - Sure thing."},
+	{"goto": "post_foam"},
 
 	{"anchor": "matcha"},
 	{"speaker": "Oakley", "text": "Could I please have an Iced Matcha?"},
@@ -147,11 +154,15 @@
 
 	{"anchor":"post_foam"},
 	{"speaker": "Narrarator", "text": "You sit down and wait for your drink."},
-
-	{"anchor": "school"},
-
-
-
+	{"speaker": "Narrarator", "text": "The cafe is nice and air conditioned"},
+	{"speaker": "Narrarator", "text": "After you wait for some time, you drink comes out."},
+	{"speaker": "Narrarator", "text": "You walk up and collect it"},
+	{"speaker": "Narrarator", "text": "Its sweet and smooth"},
+	{"speaker": "Narrarator", "text": "Delicious."},
+	{"speaker": "Narrarator", "text": "You finish your drink and watch cars go by in the window."},
+	{"speaker": "Narrarator", "text": "You realise you better get up to make it to school in time"},
+	{"speaker": "Narrarator", "text": "You get up and say thankyou to the barista, and drive to school."},
+	{"goto": "post_cafe"},
 
 	{"anchor":"post_cafe"},
 	{"speaker": "Narrarator", "text": "On the way there you almost hit somebody"},
