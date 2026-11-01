@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://de1p66cf0ktkr" path="res://assets/characters/chloe/confident idle/chloe_confident_idle3.png" id="5_jk1qb"]
 [ext_resource type="Texture2D" uid="uid://be3hbhb4ynfeq" path="res://assets/characters/oakley/talking/oakley_talking1.png" id="6_5dd4i"]
 
+[sub_resource type="Theme" id="Theme_oa1go"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2kj2"]
 bg_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
 
@@ -16,6 +18,15 @@ Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("2_rtw2f")
 Button/styles/normal = SubResource("StyleBoxFlat_n2kj2")
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5s6cn"]
+color = Color(0.5882353, 0.627451, 0.2784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw7lk"]
+bg_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_sdxvh"]
+color = Color(0.47058824, 0.7019608, 0.85882354, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s6cn"]
 bg_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
 
@@ -23,8 +34,6 @@ bg_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
 Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("2_rtw2f")
 Button/styles/normal = SubResource("StyleBoxFlat_5s6cn")
-
-[sub_resource type="Theme" id="Theme_oa1go"]
 
 [node name="main_menu" type="Control" unique_id=218771665]
 layout_mode = 3
@@ -53,33 +62,6 @@ offset_bottom = 822.0
 theme_override_fonts/font = ExtResource("2_rtw2f")
 theme_override_font_sizes/font_size = 141
 text = "When School Ends"
-
-[node name="Button" type="Button" parent="." unique_id=1708651966]
-layout_mode = 0
-offset_left = 783.0
-offset_top = 307.0
-offset_right = 1077.0
-offset_bottom = 388.0
-theme = SubResource("Theme_dba77")
-text = "credits"
-
-[node name="Button3" type="Button" parent="." unique_id=495734677]
-layout_mode = 0
-offset_left = 783.0
-offset_top = 216.0
-offset_right = 1077.0
-offset_bottom = 297.0
-theme = SubResource("Theme_usdog")
-text = "options"
-
-[node name="Button2" type="Button" parent="." unique_id=1481598234]
-layout_mode = 0
-offset_left = 783.0
-offset_top = 127.0
-offset_right = 1077.0
-offset_bottom = 208.0
-theme = SubResource("Theme_usdog")
-text = "new game"
 
 [node name="TextureRect3" type="TextureRect" parent="." unique_id=593252058]
 layout_mode = 0
@@ -127,6 +109,84 @@ offset_bottom = 276.0
 theme = SubResource("Theme_oa1go")
 text = "exit"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button2_pressed"]
+[node name="Options" type="Panel" parent="." unique_id=1236841817]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -196.75
+offset_right = 284.0
+offset_bottom = 196.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options" unique_id=147933851]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 79.75
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_rtw2f")
+theme_override_font_sizes/font_size = 48
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Options" unique_id=2139616157]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 0
+offset_left = 174.0
+offset_top = 312.75
+offset_right = 413.0
+offset_bottom = 369.75
+theme = SubResource("Theme_dba77")
+text = "back
+"
+
+[node name="VSlider" type="VSlider" parent="Options" unique_id=1715906521]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 73.75
+offset_right = 70.0
+offset_bottom = 293.75
+theme_override_styles/slider = SubResource("StyleBoxLine_5s6cn")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_cw7lk")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_sdxvh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=852628789]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104
+anchor_right = 0.104
+offset_left = 570.192
+offset_top = 90.0
+offset_right = 930.192
+offset_bottom = 394.0
+theme_override_constants/separation = 32
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1481598234]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme = SubResource("Theme_usdog")
+text = "new game"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=495734677]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme = SubResource("Theme_usdog")
+text = "options"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1708651966]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme = SubResource("Theme_dba77")
+text = "credits"
+
+[connection signal="pressed" from="Options/Button" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
