@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cj6v28oqsympp"]
+
+[ext_resource type="Texture2D" uid="uid://bfqifun7nbfvs" path="res://assets/credits.png" id="1_0bpdh"]
+
+[node name="Credits" type="Node2D" unique_id=660864023]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1314644136]
+offset_left = -8.0
+offset_top = -5.0
+offset_right = 1170.0
+offset_bottom = 679.0
+texture = ExtResource("1_0bpdh")
