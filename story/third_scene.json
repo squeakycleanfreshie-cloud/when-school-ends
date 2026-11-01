@@ -130,7 +130,7 @@
     {"goto":"post_sci_test"},
 
 
-    {"anchor":"post_sci_test"}
+    {"anchor":"post_sci_test"},
 
 
 	{"next_scene": "third_scene", "transition": "fade"}
