@@ -1,0 +1,55 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bn0xfhn1me2tk"]
+
+[ext_resource type="Texture2D" uid="uid://bvxv0sntofplm" path="res://assets/characters/teachers/bio teacher/idle/bio_teacher1.png" id="1_5k62b"]
+[ext_resource type="Texture2D" uid="uid://btuomttwscurj" path="res://assets/characters/teachers/bio teacher/idle/bio_teacher2.png" id="2_r84ki"]
+[ext_resource type="Texture2D" uid="uid://cljtcbij5txwo" path="res://assets/characters/teachers/bio teacher/idle/bio_teacher3.png" id="3_2v7jt"]
+[ext_resource type="Texture2D" uid="uid://oy8knawun7bh" path="res://assets/characters/teachers/bio teacher/idle/bio_teacher4.png" id="4_sllo6"]
+[ext_resource type="Texture2D" uid="uid://copd21gp5bqfm" path="res://assets/characters/teachers/bio teacher/idle/bio_teacher5.png" id="5_n6jwo"]
+[ext_resource type="Texture2D" uid="uid://clu6hmy8lurqr" path="res://assets/characters/teachers/bio teacher/talking/bio_teacher1.png" id="6_t4lqd"]
+[ext_resource type="Texture2D" uid="uid://dr4qy5xjhy2un" path="res://assets/characters/teachers/bio teacher/talking/bio_teacher2.png" id="7_hhthj"]
+[ext_resource type="Texture2D" uid="uid://cjnyey12t1cmi" path="res://assets/characters/teachers/bio teacher/talking/bio_teacher3.png" id="8_8i1qm"]
+[ext_resource type="Texture2D" uid="uid://dmirnmxno77cm" path="res://assets/characters/teachers/bio teacher/talking/bio_teacher4.png" id="9_flb3p"]
+[ext_resource type="Texture2D" uid="uid://ly4478g4shii" path="res://assets/characters/teachers/bio teacher/talking/bio_teacher5.png" id="10_li0jy"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 20.0,
+"texture": ExtResource("1_5k62b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_r84ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2v7jt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sllo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n6jwo")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_t4lqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hhthj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8i1qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_flb3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_li0jy")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 10.0
+}]

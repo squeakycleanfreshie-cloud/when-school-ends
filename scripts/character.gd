@@ -8,7 +8,9 @@ enum Name {
 	MIA,
 	OAKLEY,
 	NARRARATOR,
-	BARISTA
+	BARISTA,
+	BIO,
+	PRINCIPAL
 }
 
 const CHARACTER_DETAILS : Dictionary = {
@@ -47,6 +49,18 @@ const CHARACTER_DETAILS : Dictionary = {
 		"name": "Barista",
 		"gender": "male",
 		"sprite_frames": preload("res://spriteframes/narrarator.tres")
+	},
+
+	Name.BIO: {
+		"name": "Mr.Song",
+		"gender": "male",
+		"sprite_frames": preload("res://spriteframes/bio_teacher.tres")
+	},
+	
+		Name.PRINCIPAL: {
+		"name": "Ms Henderson",
+		"gender": "male",
+		"sprite_frames": preload("res://spriteframes/principal.tres")
 	}
 }
 
