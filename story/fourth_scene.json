@@ -1,0 +1,31 @@
+[
+	{"location": "school", "music": "classroom_theme"},
+	{"speaker": "Narrarator", "text": "The whole school is sitting down onto the quad"},
+    {"speaker": "Narrarator", "text": "The new principal gets up, ready to talk to the school."},
+    {"speaker": "Narrarator", "text": "-GET PRICIPAL SPRITE HERE - Hello Students!"},
+    {"speaker": "Narrarator", "text": "My name is Ms Henderson, And I am the new principal of your school."},
+    {"speaker": "Narrarator", "text": "I will be making some positive changes around, and improving the services of your school"},
+    {"speaker": "Narrarator", "text": "This year, I hope we can improve and be our best selves!"},
+    {"speaker": "Narrarator", "text": "I challenge you to push yourself further."},
+    {"speaker": "Narrarator", "text": "By effort we achive!"},
+    {"speaker": "Narrarator", "text": "The person next to you looks at you."},
+    {"speaker": "Narrarator", "text": "Cringe..."},
+    {"speaker": "Narrarator", "text": "This new principal is weird..."},
+    {"speaker": "Narrarator", "text": "The principal continues to talk. But nobody is really listing to him"},
+    {"speaker": "Narrarator", "text": "He finshes his speech, and passes the mic onto the sports teacher."},
+    {"speaker": "Narrarator", "text": "Meet me after assembly if you want to try out for the cross country team."},
+    {"choices":
+		[
+			{"text": "Sign up after assembly", "goto": "cross_country"},
+            {"text": "Skip It", "goto": "skip"}
+		]
+	},
+    {"anchor":"cross_country"},
+    {"speaker": "Narrarator", "text": "Good Choice. You can do This"},
+    {"next_scene": "cross_country", "transition": "fade"},
+
+    {"anchor":"skip"},
+    {"speaker": "Narrarator", "text": "Nah. We aren't good enough if we tried."},
+
+	{"next_scene": "", "transition": "fade"}
+]

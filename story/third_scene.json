@@ -131,7 +131,14 @@
 
 
     {"anchor":"post_sci_test"},
+	{"speaker": "Narrarator", "text": "Thankyou class for completing that"},
+	{"speaker": "Narrarator", "text": "Some of you did good, and some of you did not so good."},
+	{"speaker": "Narrarator", "text": "But it is okay, we will learn all the content this term."},
+	{"speaker": "Narrarator", "text": "The Bell Rings"},
+	{"speaker": "Narrarator", "text": "Okay class you now have assembly."},
+	{"speaker": "Narrarator", "text": "You are dismissed"},
+	{"speaker": "Narrarator", "text": "The whole class runs out to the quad."},
 
 
-	{"next_scene": "third_scene", "transition": "fade"}
+	{"next_scene": "fourth_scene", "transition": "fade"}
 ]

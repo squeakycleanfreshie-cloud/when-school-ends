@@ -21,6 +21,7 @@ boot_splash/minimum_display_time=3000
 [autoload]
 
 SceneManager="*uid://dthq1f27g2uei"
+SaveManager="*uid://bbg2w4h6vp4t0"
 
 [display]
 

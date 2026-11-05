@@ -1,0 +1,4 @@
+[	
+	{"location": "bedroom", "music": "bedroom_theme"},
+	{"next_scene": "second_scene", "transition": "fade"}
+]
