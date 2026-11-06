@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b16biytqtddsk"]
+
+[ext_resource type="Script" uid="uid://c30oa5u10i6dj" path="res://scripts/qte_scene.gd" id="1_b54ix"]
+
+[node name="qte_scene" type="Control" unique_id=1048917037]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b54ix")
+
+[node name="Timer" type="Timer" parent="." unique_id=124232807]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

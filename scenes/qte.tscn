@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://b37t0ryqcpg4e"]
+
+[ext_resource type="Script" uid="uid://bencapddmmo7w" path="res://scripts/qte.gd" id="1_1k5uo"]
+[ext_resource type="Shader" uid="uid://cmdvwhjjd8c4r" path="res://scenes/qte.gdshader" id="1_tmbk4"]
+[ext_resource type="FontFile" uid="uid://d0h52fnhev7oj" path="res://assets/fonts/bright_sunlist/Bright Sunlist DEMO VERSION.ttf" id="2_lbcdu"]
+[ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="3_1k5uo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qprmv"]
+shader = ExtResource("1_tmbk4")
+shader_parameter/first_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
+shader_parameter/second_color = Color(0.08627451, 0.40784314, 0.08627451, 1)
+shader_parameter/third_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/unfilled_color = Color(0.443, 0.443, 0.443, 1)
+shader_parameter/value = 1.0
+shader_parameter/smooth_ = 0.005
+shader_parameter/width_in = 0.85
+shader_parameter/width_out = 0.95
+shader_parameter/border_width = 0.0
+
+[node name="qte" type="Control" unique_id=1588307810]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1k5uo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1792096072]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_qprmv")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="KeyLabel" type="Label" parent="ColorRect" unique_id=1643270588]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -34.5
+offset_right = 29.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_lbcdu")
+theme_override_font_sizes/font_size = 50
+text = "Q"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="successLabel" type="Label" parent="ColorRect" unique_id=1834597341]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.0
+offset_top = -44.0
+offset_right = 180.0
+offset_bottom = 36.0
+rotation = 0.4834562
+theme_override_fonts/font = ExtResource("3_1k5uo")
+theme_override_font_sizes/font_size = 80
+text = "hit!"
