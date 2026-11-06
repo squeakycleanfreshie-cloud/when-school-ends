@@ -7,15 +7,17 @@ signal finished(success: bool)
 @onready var success_label: Label = %success_label
 @onready var timer: Timer = $Timer
 
+const ACTIONS := ["up", "down", "left", "right", "W", "S", "E", "R"]
+
 var buttonSelection = [
-	{"action": "up", "icon": preload("res://assets/icons/home_icon.png")},
-	{"action": "up", "icon": preload("res://assets/icons/home_icon.png")},
-	{"action": "up", "icon": preload("res://assets/icons/home_icon.png")},
-	{"action": "up", "icon": preload("res://assets/icons/home_icon.png")},
-	{"action": "up", "icon": preload("res://assets/icons/home_icon.png")},
-	{"action": "up", "icon": preload("res://assets/icons/home_icon.png")},
-	{"action": "up", "icon": preload("res://assets/icons/home_icon.png")},
-	{"action": "up", "icon": preload("res://assets/icons/home_icon.png")}
+	{"action": "up", "icon": preload("res://assets/icons/up.png")},
+	{"action": "down", "icon": preload("res://assets/icons/down.png")},
+	{"action": "left", "icon": preload("res://assets/icons/left.png")},
+	{"action": "right", "icon": preload("res://assets/icons/right.png")},
+	{"action": "W", "icon": preload("res://assets/icons/w.png")},
+	{"action": "S", "icon": preload("res://assets/icons/s.png")},
+	{"action": "E", "icon": preload("res://assets/icons/e.png")},
+	{"action": "R", "icon": preload("res://assets/icons/r.png")}
 ]
 
 var actionSequence: Array = []
@@ -23,7 +25,7 @@ var sequence_index := 0
 var is_done := false
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS # keep running while tree is paused
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	get_tree().paused = true
 	success_label.hide()
 	_set_random_sequence()
@@ -43,8 +45,10 @@ func _set_random_sequence() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if is_done or sequence_index >= actionSequence.size():
 		return
+	if event.is_echo():
+		return
 
-	for action in ["up"]: 
+	for action in ACTIONS:
 		if event.is_action_pressed(action):
 			if action == actionSequence[sequence_index]:
 				button_box.get_child(sequence_index).modulate = Color(1, 1, 1, 0.3)
@@ -52,8 +56,15 @@ func _unhandled_input(event: InputEvent) -> void:
 				if sequence_index >= actionSequence.size():
 					_finish(true)
 			else:
-				_finish(false)
+				_restart_sequence()
 			return
+
+func _restart_sequence() -> void:
+	sequence_index = 0
+	for node in button_box.get_children():
+		node.modulate = Color.WHITE
+	# optional: also reset the timer on a mistake
+	# timer.start()
 
 func _on_timer_timeout() -> void:
 	_finish(false)
