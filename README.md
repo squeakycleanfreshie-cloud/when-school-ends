@@ -45,4 +45,5 @@ I made this project for fun and maybe - just maybe I will put it on steam
 
 ### Credits
 Right now, all the music & art is all by me (:
+Ty to penngrin for this shader: https://godotshaders.com/shader/simple-radial-progress-bar/
 But the blip sfx are from damochas dialog bleep pack
