@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bwsjossnp0n1b"]
+
+[ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="1_gn4so"]
+[ext_resource type="Script" uid="uid://c5tno6wqr6rvi" path="res://scripts/button_sequence.gd" id="1_t34j7"]
+[ext_resource type="FontFile" uid="uid://c3mq8rm8c4sfx" path="res://assets/fonts/bright_sunlist/Bright Sunlist DEMO VERSION.otf" id="2_wc2lr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gn4so"]
+bg_color = Color(0.49207902, 0.6629973, 0.30294785, 1)
+
+[sub_resource type="Theme" id="Theme_4cd7q"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_gn4so")
+
+[node name="buttonSequence" type="CanvasLayer" unique_id=1727040531]
+process_mode = 3
+script = ExtResource("1_t34j7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=636886179]
+offset_right = 1155.0
+offset_bottom = 655.0
+color = Color(1, 1, 1, 0)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1230063050]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4cd7q")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=768263408]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="buttonBox" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1771536947]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/buttonBox" unique_id=616581864]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/MarginContainer/buttonBox" unique_id=1304354291]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/MarginContainer/buttonBox" unique_id=563954081]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="PanelContainer/MarginContainer/buttonBox" unique_id=89283495]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="PanelContainer/MarginContainer/buttonBox" unique_id=2103998786]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="PanelContainer/MarginContainer/buttonBox" unique_id=1958328500]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="TextureRect7" type="TextureRect" parent="PanelContainer/MarginContainer/buttonBox" unique_id=59705318]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="TextureRect8" type="TextureRect" parent="PanelContainer/MarginContainer/buttonBox" unique_id=958702693]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="timelabel" type="Label" parent="." unique_id=1765175056]
+unique_name_in_owner = true
+offset_left = 867.0
+offset_top = 225.0
+offset_right = 945.0
+offset_bottom = 276.0
+theme_override_fonts/font = ExtResource("1_gn4so")
+theme_override_font_sizes/font_size = 50
+text = "2:30"
+
+[node name="success_label" type="Label" parent="." unique_id=870593432]
+unique_name_in_owner = true
+offset_left = 489.0
+offset_top = 143.0
+offset_right = 656.0
+offset_bottom = 249.0
+theme_override_fonts/font = ExtResource("2_wc2lr")
+theme_override_font_sizes/font_size = 100
+text = "fail"
+
+[node name="Timer" type="Timer" parent="." unique_id=1584966178]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

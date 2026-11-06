@@ -1,4 +1,8 @@
 [	
-	{"location": "bedroom", "music": "bedroom_theme"},
+	{"location": "school", "music": "bedroom_theme"},
+	{"speaker": "Oakley", "text": "You walk over to the PE staffroom. Other kids are waiting outside"},
+	{"speaker": "Oakley", "text": "The head teacher opens the door"},
+	{"speaker": "Narrarator", "text": "__MAKE PE TEACHER: Hey mate. We are just about to head down to the oval for try outs."},
+	{"speaker": "Narrarator", "text": "You and the group head out to the oval next door, and"},
 	{"next_scene": "second_scene", "transition": "fade"}
 ]

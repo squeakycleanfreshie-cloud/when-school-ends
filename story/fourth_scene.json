@@ -25,7 +25,8 @@
     {"next_scene": "cross_country", "transition": "fade"},
 
     {"anchor":"skip"},
-    {"speaker": "Narrarator", "text": "Nah. We aren't good enough if we tried."},
-
+    {"speaker": "Oakley", "text": "Nah. We aren't good enough if we tried."},
+    {"speaker": "Oakley", "text": "The rest of the assembly folds out as usual and you get dismissed."},
+    {"speaker": "Oakley", "text": "You walk over to where your freind group sits"},
 	{"next_scene": "", "transition": "fade"}
 ]
