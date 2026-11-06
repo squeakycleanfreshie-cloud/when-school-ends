@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b38eqpkswedlm"]
+
+[ext_resource type="Script" uid="uid://wvuxlli4ky6u" path="res://scripts/spam_game.gd" id="1_sgt36"]
+[ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="2_ic7cg"]
+[ext_resource type="FontFile" uid="uid://c3mq8rm8c4sfx" path="res://assets/fonts/bright_sunlist/Bright Sunlist DEMO VERSION.otf" id="3_53qpa"]
+
+[node name="SpamGame" type="CanvasLayer" unique_id=1951187398]
+script = ExtResource("1_sgt36")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=395506021]
+custom_minimum_size = Vector2(800, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=431957782]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ic7cg")
+theme_override_font_sizes/font_size = 30
+text = "Mash Space!"
+horizontal_alignment = 1
+
+[node name="timeLabel" type="Label" parent="VBoxContainer" unique_id=1823458007]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ic7cg")
+text = "3.0s"
+
+[node name="playerBar" type="ProgressBar" parent="VBoxContainer" unique_id=933337945]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+show_percentage = false
+
+[node name="rivalBar" type="ProgressBar" parent="VBoxContainer" unique_id=237540192]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+show_percentage = false
+
+[node name="resultLabel" type="Label" parent="VBoxContainer" unique_id=1895457735]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_53qpa")
+theme_override_font_sizes/font_size = 100
+text = "YOU WIN"

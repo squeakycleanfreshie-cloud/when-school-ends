@@ -8,8 +8,8 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qprmv"]
 shader = ExtResource("1_tmbk4")
 shader_parameter/first_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
-shader_parameter/second_color = Color(0.08627451, 0.40784314, 0.08627451, 1)
-shader_parameter/third_color = Color(1, 1, 1, 1)
+shader_parameter/second_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
+shader_parameter/third_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/unfilled_color = Color(0.443, 0.443, 0.443, 1)
 shader_parameter/value = 1.0

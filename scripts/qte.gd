@@ -4,7 +4,7 @@ signal finished(success: bool)
 
 @export var keyString: String = "Q"
 @export var keyCode: Key = KEY_Q
-@export var eventDuration := 0.5
+@export var eventDuration := 2.0
 @export var displayDuration := 0.5
 
 @onready var color_rect: ColorRect = %ColorRect
@@ -33,6 +33,7 @@ func _input(event: InputEvent) -> void:
 		return
 	if not (event is InputEventKey and event.pressed and not event.echo):
 		return
+	print("key pressed: ", event.keycode, " expected: ", keyCode)
 	if get_tree().get_nodes_in_group("QTE")[0] != self:
 		return
 	if event.keycode == keyCode:
@@ -45,9 +46,9 @@ func _finish(success: bool) -> void:
 	remove_from_group("QTE")
 	if tween:
 		tween.kill()
-	if success:
-		success_label.show()
+	success_label.text = "SUCCESS" if success else "FAIL"
+	success_label.add_theme_color_override("font_color", Color.NAVAJO_WHITE if success else Color.RED)
+	success_label.show()
 	finished.emit(success)
 	await get_tree().create_timer(displayDuration).timeout
 	queue_free()
-	
