@@ -88,7 +88,7 @@
 
 	{"anchor": "post_breakfast_meal"},
 	{"speaker": "Narrarator", "text": "Your stomach is full, and its time to go to school"},
-	{"speaker": "Narrarator", "text": "ADD IN VEIW FROM CAR BACKGROUND HERE"},
+	{"location": "car", "music": "bedroom_theme"},
 	{"speaker": "Narrarator", "text": "You have some time to get a drink from a cafe"},
 	{"choices":
 		[
@@ -100,7 +100,7 @@
 	{"anchor": "cafe_stop"},
 	{"speaker": "Narrarator", "text": "You take the turn towards your favourite cafe"},
 	{"speaker": "Narrarator", "text": "You drive into a parking spot and walk inside the cafe"},
-	{"speaker": "Narrarator", "text": "CHANGE SCENE TO CAFE SCENE"},
+	{"location": "cafe", "music": "bedroom_theme"},
 	{"speaker": "Narrarator", "text": "What drink do you order?"},
 	{"choices":
 		[
@@ -162,6 +162,7 @@
 	{"speaker": "Narrarator", "text": "You finish your drink and watch cars go by in the window."},
 	{"speaker": "Narrarator", "text": "You realise you better get up to make it to school in time"},
 	{"speaker": "Narrarator", "text": "You get up and say thankyou to the barista, and drive to school."},
+	{"location": "cafe"},
 	{"goto": "post_cafe"},
 
 	{"anchor":"post_cafe"},
