@@ -10,6 +10,7 @@ var dialog_file: String = "res://story/first_scene.json"
 var dialog_index: int = 0
 var dialog_lines: Array = []
 var transitioning: bool = false
+var in_minigame: bool = false
 
 func _ready():
 	dialog_lines = load_dialog(dialog_file)
@@ -21,7 +22,7 @@ func _ready():
 	process_current_line()
 
 func _input(event):
-	if transitioning or dialog_lines.is_empty() or dialog_index >= dialog_lines.size():
+	if transitioning or in_minigame or dialog_lines.is_empty() or dialog_index >= dialog_lines.size():
 		return
 	var line = dialog_lines[dialog_index]
 	var has_choices = line.has("choices")
@@ -65,6 +66,10 @@ func process_current_line():
 		process_current_line()
 		return
 
+	if line.has("minigame"):
+		_run_minigame(line)
+		return
+
 	if line.has("show_character"):
 		var shown_name = Character.get_enum_from_string(line["show_character"])
 		character.change_character(shown_name, false, line.get("expression", ""))
@@ -82,6 +87,31 @@ func process_current_line():
 			dialog_index += 1
 			process_current_line()
 		return
+
+func _run_minigame(line: Dictionary) -> void:
+	in_minigame = true
+	dialog_ui.hide()
+
+	var success: bool = await Minigames.play(line["minigame"], line)
+
+	dialog_ui.show()
+	in_minigame = false
+
+	var branch: Dictionary = line.get("on_success", {}) if success else line.get("on_fail", {})
+	_resolve_branch(branch)
+
+func _resolve_branch(branch: Dictionary) -> void:
+	if branch.has("scene"):
+		dialog_file = "res://story/" + branch["scene"] + ".json"
+		transition_effect = branch.get("transition", "fade")
+		transitioning = true
+		SceneManager.transition_out(transition_effect)
+	elif branch.has("goto"):
+		dialog_index = get_anchor_postion(branch["goto"])
+		process_current_line()
+	else:
+		dialog_index += 1
+		process_current_line()
 
 func get_anchor_postion(anchor: String) -> int:
 	for i in range(dialog_lines.size()):

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://d007j1ki26n1o"]
+
+[ext_resource type="Script" uid="uid://b4jir23t3ck60" path="res://scripts/qte_runner.gd" id="1_py5da"]
+
+[node name="QTERunner" type="Control" unique_id=32779455]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_py5da")

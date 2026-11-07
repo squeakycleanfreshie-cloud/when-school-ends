@@ -1,13 +1,18 @@
 extends Control
 
+signal finished(success: bool)
 signal all_finished(results: Array)
 
 @onready var timer: Timer = $Timer
 
 const QTE = preload("res://scenes/qte.tscn")
 
-@export var qte_size := Vector2(128, 128) 
+@export var test_mode := false    
+@export var qte_size := Vector2(128, 128)
 @export var margin := 20.0
+@export var interval := 0.8       
+@export var duration := 2.0      
+@export var pass_ratio := 0.7     
 
 var keyList = [
 	{"keyString": "Q", "keyCode": KEY_Q},
@@ -26,6 +31,30 @@ var count := 0
 var KeyPressedList: Array = []
 var used_positions: Array[Vector2] = []
 
+func _ready() -> void:
+	if test_mode:
+		start()
+
+# config (all optional): keys, interval, duration, pass_ratio
+func start(config: Dictionary = {}) -> void:
+	if config.has("keys"):
+		keyList.clear()
+		for k in config["keys"]:
+			var s := str(k).to_upper()
+			keyList.append({"keyString": s, "keyCode": OS.find_keycode_from_string(s)})
+
+	interval = config.get("interval", interval)
+	duration = config.get("duration", duration)
+	pass_ratio = config.get("pass_ratio", pass_ratio)
+
+	count = 0
+	KeyPressedList.clear()
+	used_positions.clear()
+
+	timer.one_shot = false
+	timer.wait_time = interval
+	timer.start()
+
 func _on_timer_timeout() -> void:
 	if count >= keyList.size():
 		timer.stop()
@@ -34,6 +63,7 @@ func _on_timer_timeout() -> void:
 	var keyNode = QTE.instantiate()
 	keyNode.keyCode = keyList[count].keyCode
 	keyNode.keyString = keyList[count].keyString
+	keyNode.eventDuration = duration
 	keyNode.finished.connect(_on_key_finished)
 	add_child(keyNode)
 
@@ -65,5 +95,12 @@ func _get_spawn_position() -> Vector2:
 
 func _on_key_finished(success: bool) -> void:
 	KeyPressedList.append(success)
-	if KeyPressedList.size() == keyList.size():
-		all_finished.emit(KeyPressedList)
+	if KeyPressedList.size() < keyList.size():
+		return
+
+	var hits := KeyPressedList.count(true)
+	var passed := float(hits) / keyList.size() >= pass_ratio
+	all_finished.emit(KeyPressedList)
+
+	await get_tree().create_timer(0.6).timeout  
+	finished.emit(passed)

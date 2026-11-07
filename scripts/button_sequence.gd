@@ -75,6 +75,7 @@ func _finish(success: bool) -> void:
 	is_done = true
 	timer.stop()
 	_update_success_label(success)
+	await get_tree().create_timer(0.8).timeout
 	get_tree().paused = false
 	finished.emit(success)
 
