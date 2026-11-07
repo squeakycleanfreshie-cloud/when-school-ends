@@ -22,6 +22,11 @@
 	},
     {"anchor":"cross_country"},
     {"speaker": "Narrarator", "text": "Good Choice. You can do This"},
+    {"speaker": "Oakley", "text": "The rest of the assembly folds out as usual and you get dismissed."},
+    {"speaker": "Oakley", "text": "You walk over to the PE staffroom. Other kids are waiting outside"},
+	{"speaker": "Oakley", "text": "The head teacher opens the door"},
+	{"speaker": "Mr Cross", "text": "Hey mate. We are just about to head down to the oval for try outs."},
+	{"speaker": "Mr Cross", "text": "You and the group head out to the oval across the road from the school"},
     {"next_scene": "cross_country", "transition": "fade"},
 
     {"anchor":"skip"},

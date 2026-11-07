@@ -3,9 +3,27 @@
 [ext_resource type="Script" uid="uid://wvuxlli4ky6u" path="res://scripts/spam_game.gd" id="1_sgt36"]
 [ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="2_ic7cg"]
 [ext_resource type="FontFile" uid="uid://c3mq8rm8c4sfx" path="res://assets/fonts/bright_sunlist/Bright Sunlist DEMO VERSION.otf" id="3_53qpa"]
+[ext_resource type="Shader" uid="uid://l0tcsqysn5l" path="res://scenes/spam_game.gdshader" id="3_vkpgv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c1pb6"]
+shader = ExtResource("3_vkpgv")
+shader_parameter/bar_color = Color(0.53, 0.81, 0.92, 1)
 
 [node name="SpamGame" type="CanvasLayer" unique_id=1951187398]
 script = ExtResource("1_sgt36")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1597494589]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 158.0
+offset_top = -225.0
+offset_right = -165.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.47058824, 0.7019608, 0.85882354, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=395506021]
 custom_minimum_size = Vector2(800, 400)
@@ -33,16 +51,19 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ic7cg")
+theme_override_font_sizes/font_size = 38
 text = "3.0s"
 
 [node name="playerBar" type="ProgressBar" parent="VBoxContainer" unique_id=933337945]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 15)
+material = SubResource("ShaderMaterial_c1pb6")
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 show_percentage = false
 
 [node name="rivalBar" type="ProgressBar" parent="VBoxContainer" unique_id=237540192]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 show_percentage = false
