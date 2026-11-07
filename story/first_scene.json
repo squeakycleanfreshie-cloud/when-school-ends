@@ -1,13 +1,5 @@
 [	
 	{"location": "bedroom", "music": "bedroom_theme"},
-	{"minigame": "spam", "time_limit": 10,
-	 "on_success": {"goto": "win"},
-	 "on_fail": {"goto": "lose"}},
-	{"anchor": "win"},
-	{"speaker": "narrator", "text": "You won!"},
-	{"next_scene": "your_next_scene"},
-	{"anchor": "lose"},
-	{"speaker": "narrator", "text": "You lost..."},
 	{"speaker": "Narrarator", "text": "The sun shines on your face"},
 	{"speaker": "Narrarator", "text": "You feel refreshed for the new school year"},
 	{"speaker": "Oakley", "text": "I'm ready for this"},

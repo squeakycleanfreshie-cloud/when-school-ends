@@ -6,9 +6,15 @@ func _ready():
 	pass
 
 func change_character(character_name : Character.Name, is_talking : bool, expression: String):
+	if not Character.CHARACTER_DETAILS.has(character_name):
+		animated_sprite.hide() 
+		return
+
+	animated_sprite.show()
 	var sprite_frames = Character.CHARACTER_DETAILS[character_name]["sprite_frames"]
 	var stance = "talking" if is_talking else "idle"
 	var animation_name = expression + "-" + stance if expression else stance
+
 	if sprite_frames:
 		animated_sprite.sprite_frames = sprite_frames
 		if animated_sprite.sprite_frames.has_animation(animation_name):
