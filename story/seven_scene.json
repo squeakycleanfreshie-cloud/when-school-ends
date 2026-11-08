@@ -1,0 +1,47 @@
+[
+	{"location": "school", "music": "classroom_theme"},
+	{"speaker": "Narrarator", "text": "Hey boys! I've missed you over the break!"},
+    {"speaker": "Oakley", "text": "How where your holidays sir?"},
+    {"speaker": "Narrarator", "text": "They where good."},
+    {"speaker": "Narrarator", "text": "Lets get started."},
+    {"speaker": "Narrarator", "text": "Today boys we are working on motion graphics and editing."},
+    {"speaker": "Narrarator", "text": "For this terms assignment, we are going to be making a full length youtube video"},
+    {"speaker": "Narrarator", "text": "Todays task, I'm giving you some videos, please edit them so they get the info out"},
+    {"speaker": "Narrarator", "text": "I know most of you know how to do this, so this is kind of a refresher."},
+    {"speaker": "Narrarator", "text": "Capeessh?"},
+    {"speaker": "Oakley", "text": "Capeesh."},
+    {"speaker": "Narrarator", "text": "You open premier pro and import the videos into the app."},
+    {"speaker": "Narrarator", "text": "You start editing."},
+    {"minigame": "sequence",
+    "on_success": {"goto": "edit_1"},
+    "on_fail": {"scene": "edit_2"}},
+
+    {"anchor":"edit_1"},
+    {"speaker": "Narrarator", "text": "You finish editing the video. You show it to mr miller."},
+    {"speaker": "Narrarator", "text": "Nice job Man! You can just chill for the rest of the lesson."},
+    {"speaker": "Oakley", "text": "Cool."},
+    {"speaker": "Narrarator", "text": "What do you do?"},
+    {"choices":
+		[
+			{"text": "Watch Youtube", "goto": "yt"},
+			{"text": "Come up with ideas for HSC Major", "goto": "hsc"},
+			{"text": "Talk to Finn.", "goto": "finn"}
+		]
+	},
+
+    {"anchor":"yt"},
+    {"speaker": "Narrarator", "text": "Lets get started."},
+
+    {"anchor":"hsc"},
+    {"speaker": "Narrarator", "text": "Lets get started."},
+
+    {"anchor":"finn"},
+    {"speaker": "Oakley", "text": "Finn, how are you going?"},
+    {"speaker": "Finn", "text": "I'm okay."},
+    {"speaker": "Finn", "text": "I'm almost done working."},
+
+    
+    {"anchor":"edit_2"},
+	{"next_scene": "fifth_scene", "transition": "fade"}
+
+]
