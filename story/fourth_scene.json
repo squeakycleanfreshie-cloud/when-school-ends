@@ -33,5 +33,5 @@
     {"speaker": "Oakley", "text": "Nah. We aren't good enough if we tried."},
     {"speaker": "Oakley", "text": "The rest of the assembly folds out as usual and you get dismissed."},
     {"speaker": "Oakley", "text": "You walk over to where your freind group sits"},
-	{"next_scene": "", "transition": "fade"}
+	{"next_scene": "fifth_scene", "transition": "fade"}
 ]

@@ -1,0 +1,23 @@
+[	
+	{"location": "school", "music": "bedroom_theme"},
+	{"speaker": "Narrarator", "text": "You see your friends sitting in a new spot."},
+    {"speaker": "Oakley", "text": "Hey guys!"},
+    {"speaker": "Finn", "text": "Hey"},
+    {"speaker": "Chloe", "text": "Where where you?"},
+    {"speaker": "Oakley", "text": "I just did cross country try outs."},
+    {"speaker": "Chloe", "text": "Did you make it?"},
+    {"speaker": "Oakley", "text": "SORT OUT VARIABLES HERE"},
+    {"speaker": "hugo", "text": "Cool!"},
+    {"speaker": "Oakley", "text": "Where where you this morning chloe and mia. You normally get to school early."},
+    {"speaker": "Mia", "text": "Just late I guess.."},
+    {"speaker": "Oakley", "text": "Mkay"},
+    {"speaker": "Oakley", "text": "Do you know what we have next?"},
+    {"speaker": "Chloe", "text": "Maths"},
+    {"speaker": "Finn", "text": "Agh. I hate maths so much."},
+    {"speaker": "Chloe", "text": "And your in 12MATHA right?"},
+    {"speaker": "Oakley", "text": "Yup"},
+    {"speaker": "Chloe", "text": "I got moved up!"},
+    {"speaker": "Oakley", "text": "Thats good! And Mr Katz is a really good teacher too!"},
+    {"speaker": "Narrarator", "text": "The bell rings, and you and chloe head off to class"},
+	{"next_scene": "six_scene", "transition": "fade"}
+]

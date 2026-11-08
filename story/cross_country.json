@@ -146,13 +146,14 @@
 	{"speaker": "Mr Cross", "text": "Congratulations Guys! Everyone except Percival is in the Zone cross country team!"},
 	{"speaker": "Mr Cross", "text": "Percival is a reserve, in case any of you can't make it."},
 	{"speaker": "Oakley", "text": "Yes!"},
-	{"goto":"end"},
+	{"goto":"dont_qualify"},
 
 
 	{"anchor":"dont_qualify"},
 	{"speaker": "Narrarator", "text": "You walk back to school with everyone."},
+	{"speaker": "Narrarator", "text": "recess hasn't even ended yet."},
 	{"goto":"end"},
 
 	{"anchor":"end"},
-	{"next_scene": "second_scene", "transition": "fade"}
+	{"next_scene": "fifth_scene", "transition": "fade"}
 ]

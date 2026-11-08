@@ -6,7 +6,7 @@ extends Node2D
 @onready var next_scentence_sound = %NextScentenceSound
 
 var transition_effect: String = "fade"
-var dialog_file: String = "res://story/first_scene.json"
+var dialog_file: String = "res://story/six_scene.json"
 var dialog_index: int = 0
 var dialog_lines: Array = []
 var transitioning: bool = false
