@@ -36,32 +36,123 @@
 	 "on_fail": {"scene": "race_back"}},
 
 
+
 	{"anchor": "first_place_1"},
 	{"speaker": "Narrarator", "text": "Your in first place!"},
 	{"speaker": "Narrarator", "text": "If you keep pushing, you could win!"},
-	{"speaker": "Narrarator", "text": "How do you run the middle of the race?"},
+	{"speaker": "Narrarator", "text": "Keep pushing!"},
+	{"minigame": "spam", "time_limit": 5,
+	"on_success": {"scene": "first_place_2"},
+	 "on_fail": {"scene": "front_middle_of_pack_2"}},
 	
 
 	{"anchor": "front_of_pack_1"},
 	{"speaker": "Narrarator", "text": "Your at the front of the pack!"},
 	{"speaker": "Narrarator", "text": "If you stay like this, you will make it in!"},
-	{"speaker": "Narrarator", "text": "How do you run the middle of the race?"},
+	{"speaker": "Narrarator", "text": "Keep Pushing Harder!"},
+	{"minigame": "spam", "time_limit": 6,
+	"on_success": {"scene": "first_place_2"},
+	 "on_fail": {"scene": "front_middle_of_pack_2"}},
 	
 
 	{"anchor": "front_middle_of_pack_1"},
 	{"speaker": "Narrarator", "text": "Your in the middle of the pack. It's not enough to get you in, but if you run harder, you could make it."},
-	{"speaker": "Narrarator", "text": "How do you run the middle of the race?"},
+	{"speaker": "Narrarator", "text": "You can do this!"},
+	{"minigame": "spam", "time_limit": 7,
+	"on_success": {"scene": "front_of_pack_2"},
+	 "on_fail": {"scene": "middle_of_pack_2"}},
 	
 
 	{"anchor": "middle_of_pack_1"},
-	{"speaker": "Narrarator", "text": ""},
-	{"speaker": "Narrarator", "text": "How do you run the middle of the race?"},
+	{"speaker": "Narrarator", "text": "Your in the middle of the pack, but near the back of it. If you run harder, you could make it in-just."},
+	{"speaker": "Narrarator", "text": "Keep going!"},
+	{"minigame": "spam", "time_limit": 8,
+	"on_success": {"scene": "front_middle_of_pack_2"},
+	 "on_fail": {"scene": "race_back_2"}},
 	
 	
 	{"anchor": "race_back"},
-	{"speaker": "Narrarator", "text": ""},
-	{"speaker": "Narrarator", "text": "How do you run the middle of the race?"},
-	
+	{"speaker": "Narrarator", "text": "Your in the back of the pack. If you use everything you have, you could try and make it."},
+	{"speaker": "Narrarator", "text": "Don't give up!"},
+	{"minigame": "spam", "time_limit": 9,
+	"on_success": {"scene": "middle_of_pack_2"},
+	 "on_fail": {"scene": "race_back_2"}},
 
+
+
+	{"anchor":"first_place_2"},
+	{"speaker": "Narrarator", "text": "Your in first place! You just have the end of the race to go!"},
+	{"speaker": "Narrarator", "text": "PUSH! PUSH! PUSH!"},
+	{"minigame": "spam", "time_limit": 4,
+	"on_success": {"scene": "first_place!"},
+	 "on_fail": {"scene": "front_of_pack!"}},
+
+	{"anchor": "front_of_pack_1"},
+	{"speaker": "Narrarator", "text": "Your at the front of the pack!"},
+	{"speaker": "Narrarator", "text": "If you stay like this, you will make it in!"},
+	{"speaker": "Narrarator", "text": "Keep Pushing Harder!"},
+	{"minigame": "spam", "time_limit": 4,
+	"on_success": {"scene": "first_place!"},
+	 "on_fail": {"scene": "front_middle_of_pack_2!"}},
+	
+	{"anchor":"front_middle_of_pack_2"},
+	{"speaker": "Narrarator", "text": "Your at the front of the middle of the pack. Enough to qualify! Keep pushing through the finish!"},
+	{"minigame": "spam", "time_limit": 5,
+	"on_success": {"scene": "front_of_pack!"},
+	 "on_fail": {"scene": "middle_of_pack!"}},
+
+	{"anchor":"middle_of_pack_2"},
+	{"speaker": "Narrarator", "text": "Your in the middle of the pack. Keep pushing, and you cold"},
+	{"minigame": "spam", "time_limit": 6,
+	"on_success": {"scene": "front_middle_of_pack!"},
+	 "on_fail": {"scene": "back!"}},
+
+	{"anchor":"race_back_2"},
+	{"speaker": "Narrarator", "text": "Don't give up!"},
+	{"minigame": "spam", "time_limit": 7,
+	"on_success": {"scene": "middle_of_pack!"},
+	 "on_fail": {"scene": "back!"}},
+
+	{"anchor": "first_place!"},
+	{"speaker": "Narrarator", "text": "You had it in you!"},
+	{"speaker": "Narrarator", "text": "You came first!"},
+	{"speaker": "Narrarator", "text": "Wow!"},
+	{"goto":"qualify"},
+
+	{"anchor": "front_of_pack!"},
+	{"speaker": "Narrarator", "text": "You came 2nd! You qualified!"},
+	{"speaker": "Narrarator", "text": "Congrats!"},
+	{"goto":"qualify"},
+
+	{"anchor": "front_middle_of_pack!"},
+	{"speaker": "Narrarator", "text": "You just missed out.."},
+	{"speaker": "Narrarator", "text": "But you made the reserves"},
+	{"speaker": "Narrarator", "text": "And tried your best!"},
+	{"goto":"dont_qualify"},
+
+	{"anchor": "middle_of_pack!"},
+	{"speaker": "Narrarator", "text": "You didn't make it"},
+	{"speaker": "Narrarator", "text": "But tried your best!"},
+	{"goto":"dont_qualify"},
+
+	{"anchor": "back!"},
+	{"speaker": "Narrarator", "text": "You didn't make it"},
+	{"speaker": "Narrarator", "text": "But tried your best!"},
+	{"goto":"dont_qualify"},
+
+	{"anchor":"qualify"},
+	{"speaker": "Mr Cross", "text": "Could the following year 12 boys please come to me."},
+	{"speaker": "Mr Cross", "text": "Percival Sanders, Jack Robson, Praveet Kumar, Milo Wescar, Miro Miller and Oakley Russo."},
+	{"speaker": "Mr Cross", "text": "Congratulations Guys! Everyone except Percival is in the Zone cross country team!"},
+	{"speaker": "Mr Cross", "text": "Percival is a reserve, in case any of you can't make it."},
+	{"speaker": "Oakley", "text": "Yes!"},
+	{"goto":"end"},
+
+
+	{"anchor":"dont_qualify"},
+	{"speaker": "Narrarator", "text": "You walk back to school with everyone."},
+	{"goto":"end"},
+
+	{"anchor":"end"},
 	{"next_scene": "second_scene", "transition": "fade"}
 ]

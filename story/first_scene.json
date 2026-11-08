@@ -162,7 +162,7 @@
 	{"speaker": "Narrarator", "text": "You finish your drink and watch cars go by in the window."},
 	{"speaker": "Narrarator", "text": "You realise you better get up to make it to school in time"},
 	{"speaker": "Narrarator", "text": "You get up and say thankyou to the barista, and drive to school."},
-	{"location": "cafe"},
+	{"location": "car"},
 	{"goto": "post_cafe"},
 
 	{"anchor":"post_cafe"},
