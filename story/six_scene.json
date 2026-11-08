@@ -19,11 +19,33 @@
 		]
 	},
     
+    {"anchor":"notes"},
+    {"speaker": "Oakley", "text": "Sure. Now you owe me one though."},
+    {"speaker": "Oakley", "text": "Just kidding."},
+    
+    {"anchor":"no_notes"},
+    {"speaker": "Oakley", "text": "Uhh just take down your own notes."},
+    {"speaker": "Oakley", "text": "You will get used to how fast he talks."},
+    {"speaker": "Chloe", "text": "Fine."},
     
 
     {"anchor":"notes_lost"},
     {"speaker": "Narrarator", "text": "Mr Katz talks too fast for you to write all of the notes down."},
+    {"speaker": "Oakley", "text": "I can't get down anything of what hes saying!"},
+    {"speaker": "Chloe", "text": "Me too!"},
+    {"speaker": "Oakley", "text": "When I had him last year, he was way easier to understand!"},
 
 
+    {"anchor":"rest_of_class"},
+    {"speaker": "Narrarator", "text": "The rest of the class continues and he's still really hard to understand."},
+    {"minigame": "qte", "keys": ["W", "G", "L","B", "M", "N", "C", "O", "W", "G", "L","B", "M", "N", "C", "O"], "duration": 2.0, "interval": 0.8, "pass_ratio": 1.0,
+    "on_success": {"goto": "rest"},
+    "on_fail": {"scene": "rest"}},
+
+    {"anchor":"rest"},
+    {"speaker": "Narrarator", "text": "You feel like you just made it by one that class."},
+    {"speaker": "Chloe", "text": "I am definitley failing this year."},
+
+    {"speaker": "Chloe", "text": "I am definitley failing this year."},
 	{"next_scene": "six_scene", "transition": "fade"}
 ]
