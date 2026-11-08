@@ -5,6 +5,8 @@ Click to advance gameplay
 ***
 <img width="575" height="324" alt="Screenshot 2026-10-25 at 4 49 22 pm" src="https://github.com/user-attachments/assets/83f86037-c942-41fd-b639-29cd4fdc946f" />
 Branching choices
+***
+QTE's that play!
 
 ## Player Guide
 Play the game here: https://remymorea.itch.io/when-school-ends
