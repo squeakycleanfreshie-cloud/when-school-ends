@@ -1,10 +1,12 @@
 extends AudioStreamPlayer
 @export var audio_bus_name: String
 
+# transfers to something that the thingo can take in
 var audio_bus_id
 
 func _ready():
 	audio_bus_id = AudioServer.get_bus_index(audio_bus_name)
+
 
 func _on_v_slider_value_changed(value: float) -> void:
 	var db = linear_to_db(value)

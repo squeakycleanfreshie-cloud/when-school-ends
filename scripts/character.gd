@@ -1,6 +1,7 @@
 class_name Character
 extends Node
 
+# list the character string
 enum Name {
 	CHLOE,
 	FINN,
@@ -14,6 +15,8 @@ enum Name {
 	SPORT
 }
 
+
+# gives us the character details and spriteframes
 const CHARACTER_DETAILS : Dictionary = {
 	Name.CHLOE: {
 		"name": "Chloe",
