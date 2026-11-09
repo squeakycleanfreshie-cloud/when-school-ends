@@ -39,8 +39,9 @@
     {"speaker": "Oakley", "text": "Finn, how are you going?"},
     {"speaker": "Finn", "text": "I'm okay."},
     {"speaker": "Finn", "text": "I'm almost done working."},
+    {"speaker": "Oakley", "text": "Okay."},
+    {"speaker": "Oakley", "text": "Finn, how are you going?"},
 
-    
     {"anchor":"edit_2"},
 	{"next_scene": "fifth_scene", "transition": "fade"}
 

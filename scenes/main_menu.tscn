@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://byu6aswei0mgu" path="res://assets/characters/finn/idle/Finn_Idle2.png" id="4_tbmy8"]
 [ext_resource type="Texture2D" uid="uid://de1p66cf0ktkr" path="res://assets/characters/chloe/confident idle/chloe_confident_idle3.png" id="5_jk1qb"]
 [ext_resource type="Texture2D" uid="uid://be3hbhb4ynfeq" path="res://assets/characters/oakley/talking/oakley_talking1.png" id="6_5dd4i"]
+[ext_resource type="AudioStream" uid="uid://crtc3mqp8366o" path="res://assets/sounds/music/Untitled song (Oct 31%2C 2026 10%3A08 AM).mp3" id="8_tbmy8"]
+[ext_resource type="Script" uid="uid://bcj2m1aipq827" path="res://scripts/audio_stream_player.gd" id="9_jk1qb"]
 
 [sub_resource type="Theme" id="Theme_oa1go"]
 
@@ -18,14 +20,20 @@ Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("2_rtw2f")
 Button/styles/normal = SubResource("StyleBoxFlat_n2kj2")
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_5s6cn"]
-color = Color(0.5882353, 0.627451, 0.2784314, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw7lk"]
-bg_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_sdxvh"]
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_tbmy8"]
 color = Color(0.47058824, 0.7019608, 0.85882354, 1)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5dd4i"]
+color = Color(0.5803922, 0.6509804, 0.2, 1)
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_flqon"]
+color = Color(0.5882353, 0.63529414, 0.23529412, 1)
+thickness = 8
+vertical = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s6cn"]
 bg_color = Color(0.47058824, 0.7019608, 0.85882354, 1)
@@ -152,9 +160,12 @@ offset_left = 54.0
 offset_top = 73.75
 offset_right = 70.0
 offset_bottom = 293.75
-theme_override_styles/slider = SubResource("StyleBoxLine_5s6cn")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_cw7lk")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_sdxvh")
+theme_override_styles/slider = SubResource("StyleBoxLine_tbmy8")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_5dd4i")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_flqon")
+max_value = 1.0
+step = 0.05
+value = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=852628789]
 layout_mode = 1
@@ -185,7 +196,17 @@ layout_mode = 2
 theme = SubResource("Theme_dba77")
 text = "credits"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=296458525]
+stream = ExtResource("8_tbmy8")
+volume_db = -4.393
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+script = ExtResource("9_jk1qb")
+audio_bus_name = "Music"
+
 [connection signal="pressed" from="Options/Button" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Options/VSlider" to="AudioStreamPlayer" method="_on_v_slider_value_changed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

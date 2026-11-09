@@ -38,6 +38,7 @@
 	{"speaker": "Narrarator", "text": "ADD LIVING ROOM BG HERE WHEN READY"},
 	{"speaker": "Oakley", "text": "Mum and Dad are already at work."},
 	{"speaker": "Narrarator", "text": "You walk over to the kitchen and don't know what to make."},
+	{"location": "kitchen", "music": "bedroom_theme"},
 	{"speaker": "Narrarator", "text": "What do you make?"},
 	{"choices":
 		[

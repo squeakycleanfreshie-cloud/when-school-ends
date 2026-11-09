@@ -15,6 +15,7 @@ script = ExtResource("1_pu3yx")
 [node name="NextScentenceSound" type="AudioStreamPlayer2D" parent="." unique_id=968248856]
 unique_name_in_owner = true
 stream = ExtResource("2_gubc5")
+bus = &"SFX"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1697247942]
 layer = -1

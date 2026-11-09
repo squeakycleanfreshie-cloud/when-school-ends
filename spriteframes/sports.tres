@@ -1,0 +1,55 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://qn7tlkahj7oo"]
+
+[ext_resource type="Texture2D" uid="uid://2oky6d1tya4t" path="res://assets/characters/teachers/sports/IDLE_NEW/idle1.png" id="1_6rabc"]
+[ext_resource type="Texture2D" uid="uid://dtkk5w3hlj253" path="res://assets/characters/teachers/sports/IDLE_NEW/idle2.png" id="2_4t3f7"]
+[ext_resource type="Texture2D" uid="uid://b21einnbvb387" path="res://assets/characters/teachers/sports/IDLE_NEW/idle3.png" id="3_76xgv"]
+[ext_resource type="Texture2D" uid="uid://ba84d33to58d7" path="res://assets/characters/teachers/sports/IDLE_NEW/idle4.png" id="4_25ohf"]
+[ext_resource type="Texture2D" uid="uid://cldrqj8tx2t32" path="res://assets/characters/teachers/sports/IDLE_NEW/idle5.png" id="5_3sirx"]
+[ext_resource type="Texture2D" uid="uid://3ovdur87jsw5" path="res://assets/characters/teachers/sports/TALKING_NEW/idle1.png" id="6_p4jpr"]
+[ext_resource type="Texture2D" uid="uid://bhrgdoewied25" path="res://assets/characters/teachers/sports/TALKING_NEW/idle2.png" id="7_xb31y"]
+[ext_resource type="Texture2D" uid="uid://cvddj37vsf6rt" path="res://assets/characters/teachers/sports/TALKING_NEW/idle3.png" id="8_j7g7e"]
+[ext_resource type="Texture2D" uid="uid://cb2hj311vdxgj" path="res://assets/characters/teachers/sports/TALKING_NEW/idle4.png" id="9_dby4q"]
+[ext_resource type="Texture2D" uid="uid://cscacmp0n0d0s" path="res://assets/characters/teachers/sports/TALKING_NEW/idle5.png" id="10_jktdh"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 20.0,
+"texture": ExtResource("1_6rabc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4t3f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_76xgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_25ohf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3sirx")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_p4jpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xb31y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j7g7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dby4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jktdh")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 10.0
+}]

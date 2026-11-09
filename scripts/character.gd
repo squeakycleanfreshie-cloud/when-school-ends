@@ -63,7 +63,7 @@ const CHARACTER_DETAILS : Dictionary = {
 	Name.SPORT: {
 		"name": "Mr Cross",
 		"gender": "male",
-		"sprite_frames": preload("res://spriteframes/narrarator.tres")
+		"sprite_frames": preload("res://spriteframes/sports.tres")
 	}
 }
 

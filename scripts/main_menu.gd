@@ -3,6 +3,8 @@ extends Control
 @onready var main_buttons: VBoxContainer = $VBoxContainer
 @onready var options: Panel = $Options
 
+
+
 func _on_button2_pressed() -> void:
 	# new game
 	get_tree().change_scene_to_file("res://scenes/main_scene.tscn")
@@ -31,3 +33,6 @@ func _on_button_3_pressed() -> void:
 func _on_back_pressed() -> void:
 	main_buttons.visible = true
 	options.visible = false
+
+
+ 
