@@ -34,13 +34,58 @@
 
     {"anchor":"hsc"},
     {"speaker": "Narrarator", "text": "Lets get started."},
+    {"speaker": "Narrarator", "text": "What could I make?"},
+    {"speaker": "Narrarator", "text": "I think I'm gonna make a film."},
+    {"speaker": "Narrarator", "text": "What genre should I make my film?"},
+    {"choices":
+		[
+			{"text": "fantasy", "goto": "fant"},
+			{"text": "mystery", "goto": "mys"},
+			{"text": "dystopian", "goto": "dyst"},
+            {"text": "comedy", "goto": "com."}
+            
+		]
+	},
 
-    {"anchor":"finn"},
+
+	{"anchor": "fant"},
+    {"speaker": "Narrarator", "text": "Nice, a fantasy film. I could make some dragons in CGI."},
+    {"goto":"post_mult_dec"},
+	{"anchor": "mys"},
+    {"speaker": "Narrarator", "text": "ooh, a detective movie sounds interesting"},
+    {"goto":"post_mult_dec"},
+	{"anchor": "dyst"},
+    {"speaker": "Narrarator", "text": "I love the idea of this! I'm thinking civilliance and control of power."},
+    {"goto":"post_mult_dec"},
+    {"anchor": "com."},
+    {"speaker": "Narrarator", "text": "lets get laughing!"},
+    {"goto":"post_mult_dec"},
+
     {"speaker": "Oakley", "text": "Finn, how are you going?"},
     {"speaker": "Finn", "text": "I'm okay."},
     {"speaker": "Finn", "text": "I'm almost done working."},
     {"speaker": "Oakley", "text": "Okay."},
-    {"speaker": "Oakley", "text": "Finn, how are you going?"},
+    {"speaker": "Oakley", "text": "Can we play puffer party?"},
+    {"speaker": "Finn", "text": "when i'm done."},
+    {"speaker": "Oakley", "text": "okay, and If you need any help, I'm free."},
+    {"speaker": "Narrarator", "text": "You wait for finn to finish his work."},
+    {"speaker": "Finn", "text": "Okay, I'm done."},
+    {"speaker": "Oakley", "text": "Cool."},
+    {"speaker": "Narrarator", "text": "You and finn play puffer party together."},
+    {"speaker": "Narrarator", "text": "Its like a game of hot potato."},
+    {"speaker": "Narrarator", "text": "The theme for this round is Cuisines"},
+    {"speaker": "Oakley", "text": "Mexican"},
+    {"speaker": "Finn", "text": "Swedish"},
+    {"speaker": "Oakley", "text": "French"},
+    {"speaker": "Finn", "text": "Spanish"},
+    {"speaker": "Oakley", "text": "Japaneese"},
+    {"speaker": "Finn", "text": "Chineese"},
+    {"speaker": "Oakley", "text": "fillipino"},
+    {"speaker": "Finn", "text": "uhh....uhhh..."},
+    {"speaker": "Narrarator", "text": "BANG!"},
+    {"speaker": "Narrarator", "text": "The puffer fish on the screen expands so much, it explodes."},
+    {"speaker": "Narrarator", "text": "You keep playing until the bell goes."},
+    {"speaker": "Narrarator", "text": "You win. By a landslide."},
 
     {"anchor":"edit_2"},
 	{"next_scene": "fifth_scene", "transition": "fade"}
