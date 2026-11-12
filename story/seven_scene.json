@@ -35,8 +35,34 @@
     {"anchor":"hsc"},
     {"speaker": "Narrarator", "text": "Lets get started."},
     {"speaker": "Narrarator", "text": "What could I make?"},
+    {"choices":
+		[
+			{"text": "film", "goto": "film"},
+			{"text": "brand", "goto": "brand"},
+			{"text": "animation", "goto": "ani"},
+            {"text": "game", "goto": "game"}
+            
+		]
+    
+    },
+
+    {"anchor": "brand"},
+    {"speaker": "Narrarator", "text": "I think I'm gonna make an brand."},
+    {"speaker": "Narrarator", "text": "This would be a full branding suite. Photography, Advetisments, Mockups, Everything."},
+    {"speaker": "Narrarator", "text": "The bell rings, and its time for lunch. You go out to the quad and meet your freinds."},
+    {"goto":"end"},
+
+    {"anchor": "ani"},
+    {"speaker": "Narrarator", "text": "I think I'm gonna make an animation."},
+    {"goto":"genre"},
+    {"anchor": "game"},
+    {"speaker": "Narrarator", "text": "I think I'm gonna make a game."},
+    {"goto":"genre"},
+    {"anchor": "film"},
     {"speaker": "Narrarator", "text": "I think I'm gonna make a film."},
-    {"speaker": "Narrarator", "text": "What genre should I make my film?"},
+    {"goto":"genre"},
+    {"anchor":"genre"},
+    {"speaker": "Narrarator", "text": "What genre should I make it?"},
     {"choices":
 		[
 			{"text": "fantasy", "goto": "fant"},
@@ -49,7 +75,7 @@
 
 
 	{"anchor": "fant"},
-    {"speaker": "Narrarator", "text": "Nice, a fantasy film. I could make some dragons in CGI."},
+    {"speaker": "Narrarator", "text": "Nice, a fantasy film. I could make some dragons in blender."},
     {"goto":"post_mult_dec"},
 	{"anchor": "mys"},
     {"speaker": "Narrarator", "text": "ooh, a detective movie sounds interesting"},
@@ -60,6 +86,10 @@
     {"anchor": "com."},
     {"speaker": "Narrarator", "text": "lets get laughing!"},
     {"goto":"post_mult_dec"},
+
+    {"anchor":"post_mult_dec"},
+    {"speaker": "Narrarator", "text": "The bell rings, and you go out to the quad to see your freinds."},
+    {"goto":"end"},
 
     {"speaker": "Oakley", "text": "Finn, how are you going?"},
     {"speaker": "Finn", "text": "I'm okay."},
@@ -88,6 +118,12 @@
     {"speaker": "Narrarator", "text": "You win. By a landslide."},
 
     {"anchor":"edit_2"},
+    {"speaker": "Narrarator", "text": "This is taking rather a long time, you keep on deleting the wrong clips."},
+    {"minigame": "sequence",
+    "on_success": {"goto": "edit_1"},
+    "on_fail": {"scene": "edit_2"}},
+
+    {"anchor":"end"},
 	{"next_scene": "fifth_scene", "transition": "fade"}
 
 ]
