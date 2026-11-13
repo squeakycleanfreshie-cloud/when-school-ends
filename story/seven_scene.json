@@ -30,7 +30,9 @@
 	},
 
     {"anchor":"yt"},
-    {"speaker": "Narrarator", "text": "Lets get started."},
+    {"speaker": "Narrarator", "text": "You pull up a shorts and start doomcrolling until the bell goes"},
+    {"speaker": "Narrarator", "text": "Smarts -1"},
+    {"goto":"end"},
 
     {"anchor":"hsc"},
     {"speaker": "Narrarator", "text": "Lets get started."},
