@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cqn1206vcp61k"]
+
+[ext_resource type="Script" uid="uid://d4hfmhsio4twr" path="res://scripts/coin.gd" id="1_i64fm"]
+[ext_resource type="Texture2D" uid="uid://b6atae11k82ul" path="res://assets/car game/Pickups/Coin5.png" id="1_rwqht"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_usdog"]
+radius = 82.0975
+
+[sub_resource type="Animation" id="Animation_i64fm"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_11l1o"]
+resource_name = "pickup"
+length = 0.53333336
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.16666667, -62.5, -50, -0.1271964, -154.5, 0, 0),
+"times": PackedFloat32Array(0.033333335, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(1, 0, 0, 0.083333336, 0.16666667, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.033333335, 0.53333336)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d14el"]
+_data = {
+&"RESET": SubResource("Animation_i64fm"),
+&"pickup": SubResource("Animation_11l1o")
+}
+
+[node name="Coin" type="Area2D" unique_id=1206678847]
+script = ExtResource("1_i64fm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1985173373]
+texture = ExtResource("1_rwqht")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=763133384]
+shape = SubResource("CircleShape2D_usdog")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1953747333]
+libraries/ = SubResource("AnimationLibrary_d14el")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=237078137]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

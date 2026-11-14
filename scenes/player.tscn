@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://iyvrmrr5x46g" path="res://scenes/wheel.tscn" id="1_g2els"]
 [ext_resource type="Script" uid="uid://dotk8ip3ucgkq" path="res://scripts/player.gd" id="1_qhqgy"]
 
-[node name="Player" type="RigidBody2D" unique_id=780142251]
+[node name="Player" type="RigidBody2D" unique_id=780142251 groups=["player"]]
 script = ExtResource("1_qhqgy")
 
 [node name="WheelHolder" type="PinJoint2D" parent="." unique_id=133189756]
