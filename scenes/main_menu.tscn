@@ -220,7 +220,7 @@ audio_bus_name = "Music"
 [connection signal="pressed" from="Options/Button" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="Options/VSlider" to="AudioStreamPlayer" method="_on_v_slider_value_changed"]
 [connection signal="toggled" from="Options/CheckButton" to="Options/CheckButton" method="_on_toggled"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
