@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b6atae11k82ul" path="res://assets/car game/Pickups/Coin5.png" id="1_rwqht"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_usdog"]
-radius = 82.0975
+radius = 66.0303
 
 [sub_resource type="Animation" id="Animation_i64fm"]
 length = 0.001
@@ -65,6 +65,7 @@ _data = {
 
 [node name="Coin" type="Area2D" unique_id=1206678847]
 script = ExtResource("1_i64fm")
+value = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1985173373]
 texture = ExtResource("1_rwqht")

@@ -1,13 +1,27 @@
 [gd_scene format=3 uid="uid://bbinkpb1b3dcj"]
 
 [ext_resource type="Texture2D" uid="uid://b6atae11k82ul" path="res://assets/car game/Pickups/Coin5.png" id="1_37wei"]
+[ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="2_dfps7"]
 
 [node name="CarGameUi" type="CanvasLayer" unique_id=993220336]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=372967345]
+[node name="Coin" type="TextureRect" parent="." unique_id=372967345]
 custom_maximum_size = Vector2(100, 100)
-offset_left = 58.0
-offset_top = 35.0
-offset_right = 158.0
-offset_bottom = 135.0
+offset_left = 18.0
+offset_top = 9.0
+offset_right = 118.0
+offset_bottom = 109.0
 texture = ExtResource("1_37wei")
+
+[node name="Label" type="Label" parent="Coin" unique_id=1966031566]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 24.0
+offset_right = 144.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_dfps7")
+theme_override_font_sizes/font_size = 62
+text = "0"
