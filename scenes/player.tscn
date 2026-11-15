@@ -48,10 +48,10 @@ position = Vector2(18.900024, -29)
 polygon = PackedVector2Array(222, 100, 216, 104, 145, 103, 141, 73, 120, 57, 82, 67, 77, 104, -112, 100, -120, 70, -149, 50, -177, 64, -194, 103, -231, 105, -224, -42, -204, -60, -133, -63, -86, -29, -15, -30, 5, -61, 78, -57, 216, -8)
 
 [node name="GameOverTimer" type="Timer" parent="." unique_id=364535608]
-wait_time = 5.0
+wait_time = 3.0
 one_shot = true
 
-[node name="head" type="RigidBody2D" parent="." unique_id=1412669467]
+[node name="head" type="RigidBody2D" parent="." unique_id=1412669467 groups=["player"]]
 mass = 0.703
 
 [node name="Sprite2D" type="Sprite2D" parent="head" unique_id=1707437122]
@@ -67,7 +67,7 @@ shape = SubResource("CircleShape2D_usdog")
 position = Vector2(-31, -142)
 node_a = NodePath("..")
 node_b = NodePath("../..")
-softness = 3.2
+softness = 2.02
 angular_limit_lower = -2.2130775
 angular_limit_upper = -2.099631
 
@@ -75,6 +75,6 @@ angular_limit_upper = -2.099631
 position = Vector2(-31, -115)
 node_a = NodePath("../..")
 node_b = NodePath("..")
-softness = 1.95
+softness = 1.42
 
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_game_over_timer_timeout"]
