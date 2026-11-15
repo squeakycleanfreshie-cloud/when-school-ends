@@ -3,9 +3,19 @@
 [ext_resource type="Texture2D" uid="uid://coeb0cu68d1b1" path="res://assets/car game/Car/Cart.png" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://iyvrmrr5x46g" path="res://scenes/wheel.tscn" id="1_g2els"]
 [ext_resource type="Script" uid="uid://dotk8ip3ucgkq" path="res://scripts/player.gd" id="1_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://h7mdoffqotpl" path="res://assets/car game/Characters/Body.png" id="2_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://b1scjs13872ui" path="res://assets/car game/Characters/Head.png" id="5_tuyoq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_usdog"]
+radius = 50.74
 
 [node name="Player" type="RigidBody2D" unique_id=780142251 groups=["player"]]
 script = ExtResource("1_qhqgy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2067232929]
+position = Vector2(-33, -79)
+scale = Vector2(1.234375, 1.234375)
+texture = ExtResource("2_qlg0r")
 
 [node name="WheelHolder" type="PinJoint2D" parent="." unique_id=133189756]
 position = Vector2(-136.09998, 59)
@@ -36,3 +46,35 @@ texture = ExtResource("1_3vyb7")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2112469125]
 position = Vector2(18.900024, -29)
 polygon = PackedVector2Array(222, 100, 216, 104, 145, 103, 141, 73, 120, 57, 82, 67, 77, 104, -112, 100, -120, 70, -149, 50, -177, 64, -194, 103, -231, 105, -224, -42, -204, -60, -133, -63, -86, -29, -15, -30, 5, -61, 78, -57, 216, -8)
+
+[node name="GameOverTimer" type="Timer" parent="." unique_id=364535608]
+wait_time = 5.0
+one_shot = true
+
+[node name="head" type="RigidBody2D" parent="." unique_id=1412669467]
+mass = 0.703
+
+[node name="Sprite2D" type="Sprite2D" parent="head" unique_id=1707437122]
+position = Vector2(-34, -131)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("5_tuyoq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="head" unique_id=770383105]
+position = Vector2(-32, -152)
+shape = SubResource("CircleShape2D_usdog")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="head" unique_id=1848227735]
+position = Vector2(-31, -142)
+node_a = NodePath("..")
+node_b = NodePath("../..")
+softness = 3.2
+angular_limit_lower = -2.2130775
+angular_limit_upper = -2.099631
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="head" unique_id=2139262980]
+position = Vector2(-31, -115)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+softness = 1.95
+
+[connection signal="timeout" from="GameOverTimer" to="." method="_on_game_over_timer_timeout"]
