@@ -7,6 +7,7 @@ var fuel = 100
 
 func _ready():
 	wheels = get_tree().get_nodes_in_group("wheel")
+	get_parent().update_feul_ui(fuel)
 
 func _physics_process(delta):
 	if fuel > 0:
@@ -20,10 +21,12 @@ func _physics_process(delta):
 			for wheel in wheels:
 				if wheel.angular_velocity > -max_speed:
 					wheel.apply_torque_impulse(-speed * delta * 60)
-	print(fuel)
+
 func refuel():
 	fuel = 100
+	get_parent().update_feul_ui(fuel)
 
 func use_fuel(delta):
 	fuel -= 10 * delta
 	fuel = clamp(fuel, 0, 100)
+	get_parent().update_feul_ui(fuel)

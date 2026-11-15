@@ -2,6 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://b6atae11k82ul" path="res://assets/car game/Pickups/Coin5.png" id="1_37wei"]
 [ext_resource type="FontFile" uid="uid://brxjeuhyjxue5" path="res://assets/fonts/Times New Normal Regular.ttf" id="2_dfps7"]
+[ext_resource type="Texture2D" uid="uid://cphas3bwx40vl" path="res://assets/car game/Pickups/Fuel.png" id="3_6qpxg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qpxg"]
+bg_color = Color(0.043137256, 0.047058824, 0.05490196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q17cv"]
+bg_color = Color(0.5176471, 0.7411765, 0, 1)
 
 [node name="CarGameUi" type="CanvasLayer" unique_id=993220336]
 
@@ -25,3 +32,22 @@ theme_override_constants/outline_size = 25
 theme_override_fonts/font = ExtResource("2_dfps7")
 theme_override_font_sizes/font_size = 62
 text = "0"
+
+[node name="feul" type="TextureRect" parent="." unique_id=301845739]
+custom_maximum_size = Vector2(100, 100)
+offset_left = 22.0
+offset_top = 107.0
+offset_right = 122.0
+offset_bottom = 207.0
+texture = ExtResource("3_6qpxg")
+
+[node name="ProgressBar" type="ProgressBar" parent="feul" unique_id=706354761]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 23.0
+offset_right = 239.0
+offset_bottom = 81.0
+theme_override_styles/background = SubResource("StyleBoxFlat_6qpxg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_q17cv")
+value = 50.0
+show_percentage = false
