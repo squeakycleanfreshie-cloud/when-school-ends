@@ -42,6 +42,10 @@ func process_current_line():
 
 	var line = dialog_lines[dialog_index]
 
+	if line.has("minigame"):
+		_run_minigame(line)
+		return
+
 	if line.has("next_scene"):
 		dialog_file = "res://story/" + line["next_scene"] + ".json"
 		transition_effect = line.get("transition", "fade")
@@ -66,10 +70,6 @@ func process_current_line():
 		process_current_line()
 		return
 
-	if line.has("minigame"):
-		_run_minigame(line)
-		return
-
 	if line.has("show_character"):
 		var shown_name = Character.get_enum_from_string(line["show_character"])
 		character.change_character(shown_name, false, line.get("expression", ""))
@@ -89,10 +89,16 @@ func process_current_line():
 		return
 
 func _run_minigame(line: Dictionary) -> void:
+	print("running minigame line: ", line)
 	in_minigame = true
 	dialog_ui.hide()
 
-	var success: bool = await Minigames.play(line["minigame"], line)
+	var success: bool
+	if line.get("type", "") == "cargame":
+		success = await CarGame.play(line["minigame"], line)
+	else:
+		success = await Minigames.play(line["minigame"], line)
+	print("minigame returned: ", success)
 
 	dialog_ui.show()
 	in_minigame = false

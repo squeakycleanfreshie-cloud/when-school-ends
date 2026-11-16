@@ -14,7 +14,8 @@ func _ready():
 		$GameOverTimer.timeout.connect(_on_game_over_timer_timeout)
 
 func _physics_process(delta):
-	if fuel > 0 && !dead:
+	wheels = wheels.filter(func(w): return is_instance_valid(w))
+	if fuel > 0 and not dead:
 		$GameOverTimer.stop()
 		if Input.is_action_pressed("ui_right"):
 			apply_torque_impulse(-6000 * delta * 60)
@@ -30,10 +31,14 @@ func _physics_process(delta):
 					wheel.apply_torque_impulse(-speed * delta * 60)
 	else:
 		if $GameOverTimer.is_stopped():
+			print("game over timer started (fuel: ", fuel, " dead: ", dead, ")")
 			$GameOverTimer.start()
-	if $head.rotation_degrees > 90 || $head.rotation_degrees < -90 && !dead:
+
+	if not dead and ($head.rotation_degrees > 90 or $head.rotation_degrees < -90):
+		print("head flipped, dead")
 		dead = true
-		$head/PinJoint2D.node_b = ""
+		$head/PinJoint2D.node_b = NodePath("")
+
 func refuel():
 	fuel = 100
 	fuel_changed.emit(fuel)
@@ -44,5 +49,5 @@ func use_fuel(delta):
 	fuel_changed.emit(fuel)
 
 func _on_game_over_timer_timeout() -> void:
-	print("game over, reloading")
-	get_tree().reload_current_scene()
+	print("game over timer timeout, calling restart")
+	CarGame.restart()

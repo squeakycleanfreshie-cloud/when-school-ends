@@ -99,6 +99,10 @@
 	},
 
 	{"anchor": "cafe_stop"},
+	{
+  		"minigame": "res://scenes/game.tscn",
+  		"on_success": {"goto": "after_race"}
+	},
 	{"speaker": "Narrarator", "text": "You take the turn towards your favourite cafe"},
 	{"speaker": "Narrarator", "text": "You drive into a parking spot and walk inside the cafe"},
 	{"location": "cafe", "music": "bedroom_theme"},
@@ -167,6 +171,11 @@
 	{"goto": "post_cafe"},
 
 	{"anchor":"post_cafe"},
+	{
+  	"minigame": "res://scenes/game.tscn",
+  	"type": "cargame",
+  	"on_success": {"goto": "after_race"}
+	},
 	{"speaker": "Narrarator", "text": "On the way there you almost hit somebody"},
 	{"next_scene": "second_scene", "transition": "fade"}
 ]
