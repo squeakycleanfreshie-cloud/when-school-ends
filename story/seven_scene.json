@@ -126,6 +126,6 @@
     "on_fail": {"scene": "edit_2"}},
 
     {"anchor":"end"},
-	{"next_scene": "fifth_scene", "transition": "fade"}
+	{"next_scene": "8th_scene", "transition": "fade"}
 
 ]
