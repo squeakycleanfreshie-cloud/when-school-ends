@@ -1,0 +1,136 @@
+[	
+	{"location": "school", "music": "bedroom_theme"},
+	{"speaker": "Narrarator", "text": "After class you go to your friends group."},
+    {"speaker": "Oakley", "text": "Hey guys."},
+    {"speaker": "Finn", "text": "Hey Oakley"},
+    {"speaker": "Oakley", "text": "Do you wanna play a game after we eat?"},
+    {"speaker": "Finn", "text": "Sure."},
+    {"speaker": "Chloe", "text": "Sure. Depends what though"},
+    {"speaker": "Mia", "text": "Same"},
+    {"speaker": "hugo", "text": "Yeah I'll play"},
+    {"speaker": "Oakley", "text": "Okay what do you want to play?"},
+    {"speaker": "Mia", "text": "Impostor?"},
+    {"speaker": "Oakley", "text": "Tag?"},
+    {"speaker": "Finn", "text": "Noo, Handball"},
+    {"speaker": "Oakley", "text": "Lets vote."},
+    {"choices":
+		[
+			{"text": "Impostor", "goto": "imp"},
+			{"text": "Tip", "goto": "tip"},
+			{"text": "Handball", "goto": "ball"}
+		]
+	},
+	
+    {"anchor":"imp"},
+    {"speaker": "Oakley", "text": "Impostor"},
+    {"goto":"post_vote"},
+
+    {"anchor":"tip"},
+    {"speaker": "Oakley", "text": "Tip."},
+    {"goto":"post_vote"},
+    
+    {"anchor":"ball"},
+    {"speaker": "Oakley", "text": "Handball"},
+    {"goto":"post_vote"},
+
+    {"anchor":"post_vote"},
+    {"speaker": "Mia", "text": "Impostor"},
+    {"speaker": "Chloe", "text": "Impostor"},
+    {"speaker": "Finn", "text": "Handball"},
+    {"speaker": "Hugo", "text": "Impostor"},
+    {"speaker": "Mia", "text": "Yess. I'll give out the words."},
+    {"speaker": "Narrarator", "text": "Everyone lines up and Mia whispers a word in everyones ear."},
+    {"speaker": "Narrarator", "text": "When she whispers in your ear, she says impostor."},
+    {"speaker": "Mia", "text": "Done!"},
+    {"speaker": "Narrarator", "text": "Everybody lines up, and Finn goes first."},
+    {"speaker": "Finn", "text": "Cold"},
+    {"speaker": "Chloe", "text": "Delicous"},
+    {"speaker": "Narrarator", "text": "It's your turn. What do you say?"},
+    {"choices":
+		[
+			{"text": "Power", "goto": "cor"},
+			{"text": "Caramel", "goto": "incor"},
+			{"text": "Treat", "goto": "incor"}
+		]
+	},
+	
+
+    {"anchor":"cor"},
+    {"speaker": "Hugo", "text": "Door"},
+
+
+    {"anchor":"incor"},
+    {"speaker": "Hugo", "text": "Door"},
+    {"speaker": "Narrarator", "text": "The round ends, and everyone starts talking."},
+    {"speaker": "Hugo", "text": "it's obviously oakley. What he said had basically nothing to do with the word."},
+    {"speaker": "Chloe", "text": "I sort of understand it though. Just think"},
+    {"speaker": "Finn", "text": "Nah, I'm voting oakley."},
+    {"speaker": "Narrarator", "text": "Everyone votes, and you loose."},
+    {"speaker": "Mia", "text": "You guys were....correct!"},
+    {"speaker": "Mia", "text": "But oakley still has to guess the word."},
+    {"speaker": "Oakley", "text": "Uhh...I guess..."},
+    {"choices":
+		[
+			{"text": "Fridge", "goto": "1"},
+			{"text": "Ice Cream", "goto": "2"},
+			{"text": "Freezer", "goto": "2"}
+		]
+	},
+
+    {"anchor":"1"},
+    {"speaker": "Mia", "text": "Correct! Good Job!"},
+    {"goto":"3"},
+    {"anchor":"2"},
+    {"speaker": "Mia", "text": "Uhh, No."},
+    {"speaker": "Mia", "text": "The word was fridge."},
+    {"goto":"3"},
+    {"anchor":"3"},
+    {"speaker": "Narrarator", "text": "The bell rings, and you head of to your last class of the day."},
+    {"speaker": "Narrarator", "text": "Commerce."},
+    {"speaker": "Narrarator", "text": "You head up to the classroom"},
+    {"speaker": "Narrarator", "text": "The teacher waits inside"},
+    {"speaker": "Narrarator", "text": "You know you have a really bad teacher for commerce this term"},
+    {"speaker": "Narrarator", "text": "You walk in, and walk down to a seat"},
+    {"speaker": "Narrarator", "text": "The teacher scowls at you"},
+    {"speaker": "Narrarator", "text": "SANITISER"},
+    {"speaker": "Oakley", "text": "Huh?"},
+    {"speaker": "Narrarator", "text": "SANITISE. YOUR. HANDS"},
+    {"speaker": "Oakley", "text": "Oh, Sorry!"},
+    {"speaker": "Narrarator", "text": "You go over and put some sanitiser into your hands"},
+    {"speaker": "Narrarator", "text": "Thats definitley not sanitiser. Its soap."},
+    {"speaker": "Narrarator", "text": "You get look for your pen out of your bag, but you can't find it."},
+    {"speaker": "Oakley", "text": "Ms, could I please borrow a pen?"},
+    {"speaker": "Narrarator", "text": "Sure. I'm giving you a boomerang pen. This pen should come back to me exactly the same, just with a little less ink."},
+    {"speaker": "Oakley", "text": "Understood."},
+    {"speaker": "Narrarator", "text": "Somebody in the class sneeses"},
+    {"speaker": "Narrarator", "text": "Gazuntite!"},
+    {"speaker": "Narrarator", "text": "Please CLEAN your hands again."},
+    {"speaker": "Narrarator", "text": "The class starts and she sits at her computer talking."},
+    {"speaker": "Narrarator", "text": "She tells everybody to get out their computers and complete the task on canvas"},
+    {"speaker": "Narrarator", "text": "Everybody just plays games instead"},
+    {"speaker": "Narrarator", "text": "Do you play games?"},
+    {"choices":
+		[
+			{"text": "Yes", "goto": "game"},
+			{"text": "No", "goto": "no_game"}
+		]
+	},
+
+    {"anchor":"game"},
+    {"speaker": "Narrarator", "text": "You decide to not play any games, and get the work done."},
+    {"speaker": "Narrarator", "text": "You learn about australian law."},
+    {"speaker": "Narrarator", "text": "even though you prefer the other parts of commerce, you still finished it."},
+    {"speaker": "Narrarator", "text": "You learn about some silly laws though."},
+    {"speaker": "Narrarator", "text": "Under Section 70C of the Crimes act, corresponding or doing business with pirates is still illegal and carries a maximum penalty of 10 years in prison"},
+    {"speaker": "Oakley", "text": "Interesting."},
+    {"speaker": "Narrarator", "text": "The bell rings and you go to exit the door."},
+    {"speaker": "Oakley", "text": "She asks you about the law between countries"},
+    {"anchor":"no_game"},
+    {"speaker": "Narrarator", "text": "You open roblox and join a game with the people next to you."},
+    {"speaker": "Narrarator", "text": "The period passes really quickly"},
+    {"speaker": "Narrarator", "text": "and you didn't learn anything..."},
+    {"speaker": "Narrarator", "text": "School wise, at least."},
+
+
+	{"next_scene": "fifth_scene", "transition": "fade"}
+]
